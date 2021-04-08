@@ -18,7 +18,7 @@
 #'   \item{\code{y_vec}}{Output Vector}
 #' }
 #' @export
-#' @import stats
+
 
 generate_simulation_input <- function(n_rows = 500L,
                                       n_cols = 5L,
@@ -36,7 +36,7 @@ generate_simulation_input <- function(n_rows = 500L,
   )
 
   treat_prob <- treat_prob_generator(x_mat)
-  treat_vec <- rbinom(length(treat_prob), 1, treat_prob)
+  treat_vec <- stats::rbinom(length(treat_prob), 1, treat_prob)
 
   mu_pre_treat <- mean_generator(x_mat)
 
@@ -65,7 +65,7 @@ x_from_cov <- function(cov_mat,
 
   n_cols <- nrow(cov_mat)
 
-  base_normal_mat <- matrix(rnorm(n_rows * n_cols),
+  base_normal_mat <- matrix(stats::rnorm(n_rows * n_cols),
                             nrow = n_rows,
                             ncol = n_cols
   )
@@ -119,12 +119,12 @@ expit <- function(x) {
 #' @export
 
 example_treat_prob_generator <- function(x_mat) {
-  flat_1 <- (x_mat[, 1] - mean(x_mat[, 1])) / sd(x_mat[, 1])
+  flat_1 <- (x_mat[, 1] - mean(x_mat[, 1])) / stats::sd(x_mat[, 1])
   numer <- (flat_1^3 - 2 * flat_1^2) / 10
 
   if (ncol(x_mat) > 1) {
     numer <- numer + sign(x_mat[, 2]) / 2 +
-      x_mat %*% rnorm(
+      x_mat %*% stats::rnorm(
         n = ncol(x_mat),
         mean = 0, sd = 0.1
       )
@@ -145,7 +145,7 @@ example_treat_prob_generator <- function(x_mat) {
 #' @export
 
 example_mean_generator <- function(x_mat) {
-  b_vec <- rnorm(
+  b_vec <- stats::rnorm(
     n = ncol(x_mat),
     mean = 0,
     sd = 0.3
@@ -175,5 +175,5 @@ example_mean_generator <- function(x_mat) {
 #' @export
 
 default_error_generator <- function(n_rows) {
-  rnorm(n = n_rows)
+  stats::rnorm(n = n_rows)
 }
