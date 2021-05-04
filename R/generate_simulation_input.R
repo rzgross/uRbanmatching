@@ -17,6 +17,7 @@
 #'   \item{\code{treat_vec}}{Treatment Vector}
 #'   \item{\code{y_vec}}{Output Vector}
 #' }
+#' @import stats
 #' @export
 
 
