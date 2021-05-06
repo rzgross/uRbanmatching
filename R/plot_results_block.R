@@ -19,14 +19,6 @@ plot_results_block <- function(n_results,
 
   max_height <- y_rel[2]
 
-  ## max_height <- min(
-  ##     max(
-  ##         max(n_results[["high_propensity"]]),
-  ##         max(n_results[["high_mahal"]]),
-  ##         max(n_results[["high_weighted"]])
-  ##     ) * 1.05,
-  ##     y_rel
-  ## )
   min_x <- min(n_results[["p_cut"]])
 
   x_adj <- function(x) {
@@ -97,7 +89,7 @@ plot_results_block <- function(n_results,
   )
 
   text(
-    x = x_adj(min_x - x_ax_adj * 3),
+    x = x_adj(min_x - x_ax_adj * 4),
     y = y_adj(max_height / 2),
     labels = "RMSE",
     adj = c(0.5, 0.5),
@@ -108,53 +100,23 @@ plot_results_block <- function(n_results,
   par(xpd = FALSE)
 
   ## ------------------------------------
-  ## naive, may not even show!
-
-  ## naive_mean <- n_results[["rmse_naive"]][1]
-  ## naive_high <- n_results[["high_naive"]][1]
-  ## naive_low <- n_results[["low_naive"]][1]
-
-  ## if (naive_mean / max_height < 1.1) {
-  ##     segments(
-  ##         x0 = x_lim[1],
-  ##         x1 = x_lim[2],
-  ##         y0 = y_adj(naive_mean),
-  ##         lty = 2, col = 1, lwd = 1
-  ##     )
-  ##     segments(
-  ##         x0 = x_lim[1],
-  ##         x1 = x_lim[2],
-  ##         y0 = y_adj(naive_high),
-  ##         lwd = 0.7,
-  ##         lty = 2, col = rgb(0, 0, 0, 0.5)
-  ##     )
-  ##     segments(
-  ##         x0 = x_lim[1],
-  ##         x1 = x_lim[2],
-  ##         y0 = y_adj(naive_low),
-  ##         lwd = 0.7,
-  ##         lty = 2, col = rgb(0, 0, 0, 0.5)
-  ##     )
-  ## }
-
-  ## ------------------------------------
   ## propensity
 
   points(x_adj(n_results[["p_cut"]] - x_shift),
          y_adj(n_results[["rmse_propensity"]]),
-         type = "l", col = rgb(0.7, 0.3, 0.2, 1)
+         type = "l", col = "red"
   )
   points(x_adj(n_results[["p_cut"]] - x_shift),
          y_adj(n_results[["rmse_propensity"]]),
          pch = 20,
-         col = rgb(0.7, 0.3, 0.2, 1)
+         col = "red"
   )
   rect(
     xleft = x_adj(n_results[["p_cut"]] - rect_width - x_shift),
     xright = x_adj(n_results[["p_cut"]] + rect_width - x_shift),
     ybottom = y_adj(n_results[["low_propensity"]]),
     ytop = y_adj(n_results[["high_propensity"]]),
-    col = rgb(0.7, 0.3, 0.2, 0.8),
+    col = "red",
     border = NA
   )
 
@@ -163,19 +125,19 @@ plot_results_block <- function(n_results,
 
   points(x_adj(n_results[["p_cut"]] + x_shift),
          y_adj(n_results[["rmse_mahal"]]),
-         type = "l", col = rgb(0.2, 0.8, 0.4, 1)
+         type = "l", col = "green"
   )
   points(x_adj(n_results[["p_cut"]] + x_shift),
          y_adj(n_results[["rmse_mahal"]]),
          pch = 20,
-         col = rgb(0.2, 0.8, 0.4, 1)
+         col = "green"
   )
   rect(
     xleft = x_adj(n_results[["p_cut"]] - rect_width + x_shift),
     xright = x_adj(n_results[["p_cut"]] + rect_width + x_shift),
     ybottom = y_adj(n_results[["low_mahal"]]),
     ytop = y_adj(n_results[["high_mahal"]]),
-    col = rgb(0.2, 0.8, 0.4, 0.8),
+    col = "green",
     border = NA
   )
 
@@ -184,19 +146,19 @@ plot_results_block <- function(n_results,
 
   points(x_adj(n_results[["p_cut"]]),
          y_adj(n_results[["rmse_weighted"]]),
-         type = "l", col = rgb(0.3, 0.1, 0.9, 1)
+         type = "l", col = "purple"
   )
   points(x_adj(n_results[["p_cut"]]),
          y_adj(n_results[["rmse_weighted"]]),
          pch = 20,
-         col = rgb(0.3, 0.1, 0.9, 1)
+         col = "purple"
   )
   rect(
     xleft = x_adj(n_results[["p_cut"]] - rect_width),
     xright = x_adj(n_results[["p_cut"]] + rect_width),
     ybottom = y_adj(n_results[["low_weighted"]]),
     ytop = y_adj(n_results[["high_weighted"]]),
-    col = rgb(0.3, 0.1, 0.9, 0.8),
+    col = "purple",
     border = NA
   )
 

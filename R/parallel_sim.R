@@ -2,6 +2,7 @@
 #'
 #' @inheritParams compute_sim_result
 #' @param num_cores How many cores to use.
+#' @param num_cores1 ***
 #' @param iterations How many iterations to do.
 #' @param names_list ***
 #'
@@ -15,11 +16,12 @@ parallel_sim <- function(x_generator = default_x_generator,
                          n_rows = 500L,
                          n_cols = 5L,
                          num_weight_vectors = 100L,
-                         num_cores = parallel::detectCores() - 1,
+                         num_cores = parallel::detectCores(),
+                         num_cores1 = 1,
                          iterations = 100L,
                          names_list = NULL,
                          silent = !interactive()) {
-  sims <- parallel::mclapply(1L:iterations, function(j) {
+  sims <- parallel::mclapply(1L:max(1,iterations-2), function(j) {
     if (!silent) {
       print(paste0("iteration ", j, "/", iterations))
     }
@@ -35,5 +37,5 @@ parallel_sim <- function(x_generator = default_x_generator,
       num_weight_vectors = num_weight_vectors,
       silent = silent
     )
-  }, mc.cores = num_cores)
+  }, mc.cores = num_cores1)
 }

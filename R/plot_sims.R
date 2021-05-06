@@ -24,41 +24,31 @@ plot_sims <- function(all_results,
   par(xpd = TRUE)
   par(mar = c(1, 1, 1, 1))
 
-  plot_results_block(all_results[["2000"]],
-                     x_lim = c(0, 0.95),
-                     y_lim = c(0, 0.95),
-                     y_rel
-  )
-  plot_results_block(all_results[["4000"]],
-                     x_lim = c(1.05, 2) + x_push,
-                     y_lim = c(0, 0.95),
-                     y_rel
-  )
   plot_results_block(all_results[["500"]],
                      x_lim = c(0, 0.95),
-                     y_lim = c(1.05, 2) + y_push,
+                     y_lim = c(.3, 1.8) + y_push,
                      y_rel
   )
   plot_results_block(all_results[["1000"]],
                      x_lim = c(1.05, 2) + x_push,
-                     y_lim = c(1.05, 2) + y_push,
+                     y_lim = c(.3, 1.8) + y_push,
                      y_rel
   )
 
   ## add legends, overall title
   text(
-    x = c(0.475, 1.525, 0.475, 1.525) + x_push * c(0, 1, 0, 1),
-    y = c(2, 2, 0.95, 0.95) + c(y_push, y_push, 0, 0),
+    x = c(0.475, 1.525) + x_push * c(0, 1),
+    y = c(1.8, 1.8) + c(y_push, y_push),
     adj = c(0.5, 0.5),
-    labels = paste("n = ", c(500, 1000, 2000, 4000)),
+    labels = paste("n = ", c(500, 1000)),
     cex = 1.2
   )
 
   y_seq <- seq(1.1 + y_push, 1.5 + y_push, length.out = 3)
   col_vec <- c(
-    rgb(0.7, 0.3, 0.2, 1),
-    rgb(0.2, 0.8, 0.4),
-    rgb(0.3, 0.1, 0.9, 1)
+    "red",
+    "green",
+    "purple"
   )
 
   segments(
