@@ -16,25 +16,21 @@ propensity_bipartite_matches(
 )
 }
 \arguments{
-\item{x_mat}{input/design matrix (already rank-adjusted etc)}
+\item{x_mat}{Input/design matrix}
 
 \item{treat_vec}{Logical (or 1/0) vector, indicating treatment (or control).}
 
-\item{match_method}{***}
+\item{match_method}{"with_replacement", "optimal", or "greedy"}
 
 \item{propensity_list}{See \code{gen_propensity_list}}
 
-\item{n_sinks}{how many potential matches to not bother with
-NOTE: you can do this as a vector, but not for optimal matching.}
+\item{n_sinks}{Number of potential matches that don't need to be matched.}
 
-\item{caliper_list}{Optional, see \code{gen_caliper_list}. Provide
-this to force matches that are close on some metric.}
+\item{caliper_list}{Forces matches that are close on some metric.}
 
-\item{sqrt_mahal}{***}
+\item{sqrt_mahal}{Whether to use square root of mahalanobis distances.}
 
-\item{tol_val}{For optimal matches, you can set a tolerance
-to be within optimality of, which can be zero for perfect optimality.
-Default 1e-4 is reasonable in many cases.}
+\item{tol_val}{For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.}
 }
 \description{
 Propensity match for (default) bipartite

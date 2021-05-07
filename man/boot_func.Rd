@@ -2,8 +2,7 @@
 % Please edit documentation in R/boot_func.R
 \name{boot_func}
 \alias{boot_func}
-\title{Simple bootstrap function that does a resampling bootstrap of a vector
-for a given function.}
+\title{Resampling bootstrap of a vector for a given function.}
 \usage{
 boot_func(vec, func, resamples = 100L)
 }
@@ -15,10 +14,8 @@ boot_func(vec, func, resamples = 100L)
 \item{resamples}{How many resamples to do.}
 }
 \value{
-Returns vector of length \code{resamples},
-each from \code{func} applied to a bootstrap resample.
+Returns vector of length \code{resamples}, each from \code{func} applied to a bootstrap resample.
 }
 \description{
-Simple bootstrap function that does a resampling bootstrap of a vector
-for a given function.
+Resampling bootstrap of a vector for a given function.
 }

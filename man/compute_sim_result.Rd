@@ -36,7 +36,7 @@ generate zero-mean data.}
 probably want to use that: this argument should be a function that
 accepts a \code{treat_vec} and produces a vector of sink numbers.}
 
-\item{match_method}{***}
+\item{match_method}{"with_replacement", "optimal", or "greedy"}
 
 \item{n_rows}{How many rows to generate.}
 

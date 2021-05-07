@@ -14,10 +14,7 @@ optimal_match(dist_mat, treat_vec, n_sinks = 0, tol_val = 1e-04)
 
 \item{n_sinks}{single value}
 
-\item{tol_val}{tolerance for solving optimal matches - how far is
-is acceptable to be from the true optimal value? Speed with large value,
-accuracy with small. Only relevant for \code{!with_replacement && !greedy}.
-Default 1e-4 is reasonable in many cases.}
+\item{tol_val}{Tolerance for solving optimal matches (how far from the true optimal value is acceptable). Speed with large value, accuracy with small.}
 }
 \description{
 Computes optimal matches, bipartite

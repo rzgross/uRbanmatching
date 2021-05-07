@@ -15,20 +15,13 @@ binary_search(
 \arguments{
 \item{target_value}{The value the function should achieve.}
 
-\item{monotone_function}{The function we want to find the
-relevant input for.}
+\item{monotone_function}{The function we want to find the  relevant input for.}
 
-\item{init_bounds}{Default NULL; supply a length-two vector if
-you wish to supply your own initial bounds. Note that if your function
-only works in a certain range, or is only monotonic in a certain range,
-then you'll very likely need to supply your own bounds. If not given,
-we'll search in both directions from zero.}
+\item{init_bounds}{Default NULL; Bounds on the function being searched.}
 
-\item{error_gap}{Binary search until the gap between the
-function on the input and the target value is smaller than this number.}
+\item{error_gap}{Binary search until the gap between the function on the input and the target value is smaller than this number.}
 
-\item{max_iters}{How many iterations to try at most. You can supply
-\code{Inf} if you really want.}
+\item{max_iters}{Maximum umber of iterations to try.}
 }
 \value{
 The input that gives \code{target_value} as output.

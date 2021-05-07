@@ -3,6 +3,7 @@
 export(all_bipartite_matches)
 export(binary_search)
 export(bipartite_matches)
+export(boot_func)
 export(brier_bipartite_matches)
 export(brier_score)
 export(brier_score_cv)

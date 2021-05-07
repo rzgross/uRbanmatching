@@ -1,20 +1,13 @@
 #' Generic binary search algo: finding the input.
 #'
 #' @param target_value The value the function should achieve.
-#' @param monotone_function The function we want to find the
-#'   relevant input for.
-#' @param init_bounds Default NULL; supply a length-two vector if
-#'   you wish to supply your own initial bounds. Note that if your function
-#'   only works in a certain range, or is only monotonic in a certain range,
-#'   then you'll very likely need to supply your own bounds. If not given,
-#'   we'll search in both directions from zero.
-#' @param error_gap Binary search until the gap between the
-#'   function on the input and the target value is smaller than this number.
-#' @param max_iters How many iterations to try at most. You can supply
-#'   \code{Inf} if you really want.
+#' @param monotone_function The function we want to find the  relevant input for.
+#' @param init_bounds Default NULL; Bounds on the function being searched.
+#' @param error_gap Binary search until the gap between the function on the input and the target value is smaller than this number.
+#' @param max_iters Maximum umber of iterations to try.
 #' @return The input that gives \code{target_value} as output.
-#'
 #' @export
+
 binary_search <- function(target_value,
                           monotone_function,
                           init_bounds = NULL,

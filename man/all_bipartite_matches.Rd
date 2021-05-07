@@ -2,8 +2,7 @@
 % Please edit documentation in R/all_bipartite_matches.R
 \name{all_bipartite_matches}
 \alias{all_bipartite_matches}
-\title{idea is to complete a search for a given N,
-or vector N}
+\title{all_bipartite_matches}
 \usage{
 all_bipartite_matches(
   x_mat,
@@ -19,34 +18,27 @@ all_bipartite_matches(
 )
 }
 \arguments{
-\item{x_mat}{input/design matrix (already rank-adjusted etc)}
+\item{x_mat}{Input/design matrix}
 
-\item{cov_x}{the (potentially rank-adjusted) covariance of \code{x_mat}.
-This means it's possible that \code{cov(x_mat)} is not equal to
-\code{cov_x}; see \code{covariance_with_ranks} for more details.}
+\item{cov_x}{The covariance of \code{x_mat}. Can be rank_adjusted by using \code{covariance_with_ranks}.}
 
-\item{weight_list}{list of weight vectors. See `generate_random_weights` to
+\item{weight_list}{List of weight vectors. See `generate_random_weights` to
 automatically generate a reasonable set of vectors.}
 
 \item{treat_vec}{Logical (or 1/0) vector, indicating treatment (or control).}
 
-\item{match_method}{***}
+\item{match_method}{"with_replacement", "optimal", or "greedy"}
 
-\item{n_sinks}{how many potential matches to not bother with
-NOTE: you can do this as a vector, but not for optimal matching.}
+\item{n_sinks}{Number of potential matches that don't need to be matched.}
 
-\item{caliper_list}{Optional, see \code{gen_caliper_list}. Provide
-this to force matches that are close on some metric.}
+\item{caliper_list}{Forces matches that are close on some metric.}
 
-\item{propensity_list}{***}
+\item{propensity_list}{Default NULL. List of propensity scores.}
 
-\item{sqrt_mahal}{***}
+\item{sqrt_mahal}{Whether to use square root of mahalanobis distances.}
 
-\item{tol_val}{For optimal matches, you can set a tolerance
-to be within optimality of, which can be zero for perfect optimality.
-Default 1e-4 is reasonable in many cases.}
+\item{tol_val}{For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.}
 }
 \description{
-idea is to complete a search for a given N,
-or vector N
+all_bipartite_matches
 }

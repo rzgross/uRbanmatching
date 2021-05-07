@@ -14,9 +14,10 @@ parallel_sim(
   n_rows = 500L,
   n_cols = 5L,
   num_weight_vectors = 100L,
+  iterations = 100L,
   num_cores = parallel::detectCores(),
   num_cores1 = 1,
-  iterations = 100L,
+  operating_system = "Mac",
   names_list = NULL,
   silent = !interactive()
 )
@@ -39,7 +40,7 @@ generate zero-mean data.}
 probably want to use that: this argument should be a function that
 accepts a \code{treat_vec} and produces a vector of sink numbers.}
 
-\item{match_method}{***}
+\item{match_method}{"with_replacement", "optimal", or "greedy"}
 
 \item{n_rows}{How many rows to generate.}
 
@@ -47,11 +48,13 @@ accepts a \code{treat_vec} and produces a vector of sink numbers.}
 
 \item{num_weight_vectors}{How many weight vectors to generate.}
 
+\item{iterations}{How many iterations to do.}
+
 \item{num_cores}{How many cores to use.}
 
 \item{num_cores1}{***}
 
-\item{iterations}{How many iterations to do.}
+\item{operating_system}{***}
 
 \item{names_list}{***}
 

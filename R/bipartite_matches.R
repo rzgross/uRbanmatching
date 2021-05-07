@@ -1,26 +1,11 @@
-#' Generating bipartite matched pairs
+#' bipartite_matches
 #'
-#' Generates matched pairs either:
-#' \describe{
-#'   \item{With Replacement}{Finds smallest control for each treatment}
-#'   \item{Without Replacement, Greedy}{Greedily generates pairs. Note that
-#'   the order for choosing the greedy pairs is random, which is not the only
-#'   possible solution.}
-#'   \item{Without Replacement, Optimally}{Minimum total distance}
-#' }
-#' If you're happy to use control units potentially multiple times,
-#' then the first way is fast and optimal.
-#'
-#' If not, you have to trade off speed vs optimality. Greedy runs
-#' over all units in a random order, so if you want to run greedy a bunch of
-#' times and take the best, it would still be (likely) much faster than
-#' running optimal matching.
+#' Generates bipartite matched pairs either with replacement, greedily without replacement, or optimally.
 #'
 #' @param dist_mat Matrix of pairwise distances.
 #' @param treat_vec Vector representing all subjects; 0 for control,
 #'   1 for treated.
-#' @param match_method This enum corresponds to the three matching methods
-#'   discussed above:
+#' @param match_method Choice of the three matching methods:
 #'   \describe{
 #'     \item{"with_replacement"}{Finds smallest control for each treatment}
 #'     \item{"greedy"}{Greedily generates pairs. Note that
@@ -28,18 +13,10 @@
 #'     possible solution.}
 #'     \item{"optimal"}{Minimum total distance}
 #'   }
-#' @param n_sinks how many sinks to use; can be vector. Note that for greedy and
-#'   simple with-replacement matching, it's often better to sort this
-#'   elsewhere. Optimal matching can only take one value.
-#'   Default NULL to match all and ignore sinks.
-#' @param tol_val tolerance for solving optimal matches - how far is
-#'   is acceptable to be from the true optimal value? Speed with large value,
-#'   accuracy with small. Only relevant for \code{!with_replacement && !greedy}.
-#'   Default 1e-4 is reasonable in many cases.
-#' @param weight_vec Default \code{NULL}: optionally supply the weight vector
-#'   used to generate \code{dist_mat} and it'll be returned in the
-#'   \code{match_list} generated from this function
-#' @return basic return value is a list with five elements and an optional sixth:
+#' @param n_sinks How many sinks to use; can be vector. Default NULL to match all and ignore sinks.
+#' @param tol_val Tolerance for solving optimal matches (how far from the true optimal value is acceptable). Speed with large value, accuracy with small.
+#' @param weight_vec Default \code{NULL}: optionally supply the weight vector used to generate \code{dist_mat}
+#' @return A list with five elements and an optional sixth:
 #'   \describe{
 #'     \item{\code{treat_index}}{index of treated units, from all units}
 #'     \item{\code{treat_index_within}}{index of treated units,
@@ -51,11 +28,8 @@
 #'     \item{\code{weight_vec}}{weight vector used to generate
 #'           \code{dist_mat} if supplied}
 #'   }
-#'   You'll get a list of such objects, each
-#'   with an extra element: the number of sinks used. If you
-#'   have \code{n_sinks} as \code{NULL}, then it'll default to
-#'   a single sink value: zero.
 #' @export
+
 bipartite_matches <- function(dist_mat,
                               treat_vec,
                               match_method = c(

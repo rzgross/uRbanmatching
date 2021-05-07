@@ -1,26 +1,19 @@
-#' idea is to complete a search for a given N,
-#' or vector N
+#' all_bipartite_matches
 #'
-#' @param x_mat input/design matrix (already rank-adjusted etc)
-#' @param cov_x the (potentially rank-adjusted) covariance of \code{x_mat}.
-#'   This means it's possible that \code{cov(x_mat)} is not equal to
-#'   \code{cov_x}; see \code{covariance_with_ranks} for more details.
-#' @param weight_list list of weight vectors. See `generate_random_weights` to
+#' @param x_mat Input/design matrix
+#' @param cov_x The covariance of \code{x_mat}. Can be rank_adjusted by using \code{covariance_with_ranks}.
+#' @param weight_list List of weight vectors. See `generate_random_weights` to
 #'   automatically generate a reasonable set of vectors.
 #' @param treat_vec Logical (or 1/0) vector, indicating treatment (or control).
-#' @param n_sinks how many potential matches to not bother with
-#'   NOTE: you can do this as a vector, but not for optimal matching.
-#' @param caliper_list Optional, see \code{gen_caliper_list}. Provide
-#'   this to force matches that are close on some metric.
-#' @param tol_val For optimal matches, you can set a tolerance
-#'   to be within optimality of, which can be zero for perfect optimality.
-#'   Default 1e-4 is reasonable in many cases.
-#' @param match_method ***
-#' @param propensity_list ***
-#' @param sqrt_mahal ***
+#' @param n_sinks Number of potential matches that don't need to be matched.
+#' @param caliper_list Forces matches that are close on some metric.
+#' @param tol_val For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.
+#' @param match_method "with_replacement", "optimal", or "greedy"
+#' @param propensity_list Default NULL. List of propensity scores.
+#' @param sqrt_mahal Whether to use square root of mahalanobis distances.
 #' @import stats
-#'
 #' @export
+
 all_bipartite_matches <- function(x_mat,
                                   cov_x,
                                   weight_list,

@@ -5,6 +5,7 @@
 #' @param num_cores1 ***
 #' @param iterations How many iterations to do.
 #' @param names_list ***
+#' @param operating_system ***
 #'
 #' @export
 parallel_sim <- function(x_generator = default_x_generator,
@@ -16,26 +17,49 @@ parallel_sim <- function(x_generator = default_x_generator,
                          n_rows = 500L,
                          n_cols = 5L,
                          num_weight_vectors = 100L,
+                         iterations = 100L,
                          num_cores = parallel::detectCores(),
                          num_cores1 = 1,
-                         iterations = 100L,
+                         operating_system = "Mac",
                          names_list = NULL,
                          silent = !interactive()) {
-  sims <- parallel::mclapply(1L:max(1,iterations-2), function(j) {
-    if (!silent) {
-      print(paste0("iteration ", j, "/", iterations))
-    }
-    compute_sim_result(
-      x_generator = x_generator,
-      treat_prob_generator = treat_prob_generator,
-      mean_generator = mean_generator,
-      error_generator = error_generator,
-      n_sink_gen = n_sink_gen,
-      match_method = match_method,
-      n_rows = n_rows,
-      n_cols = n_cols,
-      num_weight_vectors = num_weight_vectors,
-      silent = silent
-    )
-  }, mc.cores = num_cores1)
+  if(operating_system != "Windows"){
+    sims <- parallel::mclapply(1L:max(1,iterations-1), function(j) {
+      if (!silent) {
+        print(paste0("iteration ", j, "/", iterations))
+      }
+      compute_sim_result(
+        x_generator = x_generator,
+        treat_prob_generator = treat_prob_generator,
+        mean_generator = mean_generator,
+        error_generator = error_generator,
+        n_sink_gen = n_sink_gen,
+        match_method = match_method,
+        n_rows = n_rows,
+        n_cols = n_cols,
+        num_weight_vectors = num_weight_vectors,
+        silent = silent
+      )
+    }, mc.cores = num_cores1)
+  }
+  else{
+    sims <- parallel::parLapply(1L:max(1,iterations-2), function(j) {
+      if (!silent) {
+        print(paste0("iteration ", j, "/", iterations))
+      }
+      compute_sim_result(
+        x_generator = x_generator,
+        treat_prob_generator = treat_prob_generator,
+        mean_generator = mean_generator,
+        error_generator = error_generator,
+        n_sink_gen = n_sink_gen,
+        match_method = match_method,
+        n_rows = n_rows,
+        n_cols = n_cols,
+        num_weight_vectors = num_weight_vectors,
+        silent = silent
+      )
+    }, mc.cores = num_cores1)
+  }
 }
+

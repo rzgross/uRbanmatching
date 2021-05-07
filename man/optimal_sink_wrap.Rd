@@ -15,10 +15,7 @@ optimal_sink_wrap(dist_mat, treat_vec, n_sinks, tol_val, weight_vec = NULL)
 
 \item{n_sinks}{default NULL, vector of sink values to use.}
 
-\item{tol_val}{tolerance for solving optimal matches - how far is
-is acceptable to be from the true optimal value? Speed with large value,
-accuracy with small. Only relevant for \code{!with_replacement && !greedy}.
-Default 1e-4 is reasonable in many cases.}
+\item{tol_val}{Tolerance for solving optimal matches (how far from the true optimal value is acceptable). Speed with large value, accuracy with small.}
 
 \item{weight_vec}{Default \code{NULL}: optionally supply the weight vector
 used to generate \code{dist_mat} and it'll be returned in the
