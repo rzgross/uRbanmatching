@@ -1,10 +1,10 @@
-#' A default function that generates an input data matrix.
+#' default_x_generator
 #'
-#' First generates a random covariance, then generates
-#' normal data with that covariance (actually correlation).
-#' @param n_rows How many rows to produce.
-#' @param n_cols How many columns to produce.
-#' @return A matrix of data
+#' Function that generates an input data matrix. Used as default in \code{generate_simulation_input}.
+#'
+#' @param n_rows Number ofrows to produce.
+#' @param n_cols Number of columns to produce.
+#' @return A matrix of data.
 #'
 #' @export
 default_x_generator <- function(n_rows,

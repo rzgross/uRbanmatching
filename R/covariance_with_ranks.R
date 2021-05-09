@@ -1,11 +1,11 @@
-#' computes the covariance of the input matrix, adjusting for ranks if given
+#' covariance_with_ranks
 #'
-#' adjusts to ranks if given; fixes ties; rescales etc;
-#' returns the covariance of x_mat. If no rank_cols are given, this
+#' Computes the covariance of the input matrix, adjusting for ranks if given. If no rank_cols are given, this
 #' function is identical to just calling cov(x_mat)
-#' @param x_mat matrix of variables (numeric)
-#' @param rank_cols names of columns to be converted to ranks before analysis
-#' @return covariance matrix of x_mat (potentially adjusted for ranks)
+#'
+#' @param x_mat Matrix of variables (numeric)
+#' @param rank_cols Names of columns to be converted to ranks before analysis
+#' @return Covariance matrix of x_mat (potentially adjusted for ranks)
 #'
 #' @export
 covariance_with_ranks <- function(x_mat,

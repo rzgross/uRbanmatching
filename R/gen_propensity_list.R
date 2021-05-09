@@ -1,15 +1,10 @@
-#' Takes in elements needed for propensity work, checks input and
-#' builds a named list.
+#' gen_propensity_list
 #'
-#' @param propensity_function A function that accepts a list
-#'   with four elements: \code{x_train}, \code{x_test},
-#'   \code{y_train}, \code{y_test}, and forms predictions
-#'   using \code{x_test} (I guess \code{y_test} isn't used yet)
-#' @param oos_propensity Logical, do you want to predict out of sample
-#'   for the propensity score? Most people don't, and indeed \code{FALSE}
-#'   is the default.
-#' @param n_folds Default NULL; how many folds you want if using
-#'   out of sample propensity.
+#' Takes in elements needed for propensity function, checks input and builds a named list.
+#'
+#' @param propensity_function A function that accepts a list with four elements: \code{x_train}, \code{x_test}, \code{y_train}, \code{y_test}, and forms predictions using \code{x_test} (I guess \code{y_test} isn't used yet)
+#' @param oos_propensity Logical, whether to predict out of sample for the propensity score.
+#' @param n_folds Default NULL; how many folds if using out of sample propensity.
 #' @return Named list, same names as input params.
 #'
 #' @export

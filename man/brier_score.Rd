@@ -2,8 +2,7 @@
 % Please edit documentation in R/brier_score.R
 \name{brier_score}
 \alias{brier_score}
-\title{Takes in training/test data and a prediction
-function to use, generates brier score}
+\title{brier_score}
 \usage{
 brier_score(
   train_test_list,
@@ -12,19 +11,15 @@ brier_score(
 )
 }
 \arguments{
-\item{train_test_list}{output from \code{predict_prepare}}
+\item{train_test_list}{Output from \code{predict_prepare}}
 
-\item{match_predict_function}{function to predict treated unit,
-see e.g. \code{match_predict_xgb}
-(produces the default on calling) or
-\code{match_predict_linear}}
+\item{match_predict_function}{Function to predict treated unit, either  \code{match_predict_xgb} or \code{match_predict_linear}}
 
-\item{avg}{logical, default TRUE: should we average (or sum) the briers?}
+\item{avg}{Whether to average (or sum) the briers.}
 }
 \value{
-result from \code{calc_brier}, length-one double
+Result from \code{calc_brier}, length-one double
 }
 \description{
-Takes in training/test data and a prediction
-function to use, generates brier score
+Takes in training/test data and a prediction function to use, then generates brier score.
 }

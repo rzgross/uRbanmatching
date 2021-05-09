@@ -2,8 +2,7 @@
 % Please edit documentation in R/brier_bipartite_matches.R
 \name{brier_bipartite_matches}
 \alias{brier_bipartite_matches}
-\title{Computes all matches, then gets the brier scores for each. Reorder by
-number of sinks.}
+\title{brier_bipartite_matches}
 \usage{
 brier_bipartite_matches(
   x_mat,
@@ -32,31 +31,30 @@ automatically generate a reasonable set of vectors.}
 
 \item{treat_vec}{Logical (or 1/0) vector, indicating treatment (or control).}
 
-\item{match_method}{***}
+\item{match_method}{"with_replacement", "optimal", or "greedy"}
 
 \item{n_sinks}{Number of potential matches that don't need to be matched.}
 
 \item{caliper_list}{Forces matches that are close on some metric.}
 
-\item{propensity_list}{***}
+\item{propensity_list}{Default NULL. List of propensity scores.}
 
-\item{sqrt_mahal}{***}
+\item{sqrt_mahal}{Whether to use square root of Mahalanobis distances.}
 
 \item{tol_val}{For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.}
 
 \item{design}{see \code{predict_prepare}}
 
-\item{num_folds}{how many CV folds to use}
+\item{num_folds}{Number of CV folds to use}
 
 \item{match_predict_function}{function to predict treated units}
 
-\item{silent}{***}
+\item{silent}{Whether to suppress messages as it's running.}
 }
 \value{
 List of matches within sink values,
  and brier scores for each.
 }
 \description{
-Computes all matches, then gets the brier scores for each. Reorder by
-number of sinks.
+Computes all matches, then gets the brier scores for each.
 }

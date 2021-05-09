@@ -2,20 +2,19 @@
 % Please edit documentation in R/covariance_with_ranks.R
 \name{covariance_with_ranks}
 \alias{covariance_with_ranks}
-\title{computes the covariance of the input matrix, adjusting for ranks if given}
+\title{covariance_with_ranks}
 \usage{
 covariance_with_ranks(x_mat, rank_cols = NULL)
 }
 \arguments{
-\item{x_mat}{matrix of variables (numeric)}
+\item{x_mat}{Matrix of variables (numeric)}
 
-\item{rank_cols}{names of columns to be converted to ranks before analysis}
+\item{rank_cols}{Names of columns to be converted to ranks before analysis}
 }
 \value{
-covariance matrix of x_mat (potentially adjusted for ranks)
+Covariance matrix of x_mat (potentially adjusted for ranks)
 }
 \description{
-adjusts to ranks if given; fixes ties; rescales etc;
-returns the covariance of x_mat. If no rank_cols are given, this
+Computes the covariance of the input matrix, adjusting for ranks if given. If no rank_cols are given, this
 function is identical to just calling cov(x_mat)
 }

@@ -1,8 +1,10 @@
-#' Produces a list of indices split into k-folds
+#' fold_indexing
 #'
-#' @param index_length length of vector to index
-#' @param num_folds how many folds you need
-#' @return list of vectors of indices
+#' Produces a list of indices split into k-folds.
+#'
+#' @param index_length Length of vector to index
+#' @param num_folds Number of folds to use.
+#' @return List of vectors of indices
 #'
 #' @export
 fold_indexing <- function(index_length,

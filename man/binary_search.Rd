@@ -2,7 +2,7 @@
 % Please edit documentation in R/binary_search.R
 \name{binary_search}
 \alias{binary_search}
-\title{Generic binary search algo: finding the input.}
+\title{binary_search}
 \usage{
 binary_search(
   target_value,

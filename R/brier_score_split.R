@@ -1,8 +1,10 @@
-#' For a match, calculates brier score on a test split of the data
+#' brier_score_split
+#'
+#' For a match, calculates brier score on a test split of the data.
 #'
 #' @inheritParams permutation_brier
-#' @param train_fraction split of data to use for training
-#' @return brier score
+#' @param train_fraction Split of data to use for training
+#' @return Brier score
 #'
 #' @export
 brier_score_split <- function(x_mat,

@@ -2,8 +2,7 @@
 % Please edit documentation in R/generate_plot_list.R
 \name{generate_plot_list}
 \alias{generate_plot_list}
-\title{Takes the result of \code{generate_p_cut_frame} and creates plot
-lists based on our choise of RMSE function.}
+\title{generate_plot_list}
 \usage{
 generate_plot_list(
   full_plot_frame,
@@ -14,12 +13,10 @@ generate_plot_list(
 \arguments{
 \item{full_plot_frame}{Result from \code{generate_p_cut_frame}.}
 
-\item{rmse_func}{Function that takes in a vector of estimates and computes
-an RMSE.}
+\item{rmse_func}{Function that takes in a vector of estimates and computes an RMSE.}
 
-\item{silent}{If you don't want to log anything.}
+\item{silent}{Whether to suppress messages as it's running.. Default \code{!interactive()}.}
 }
 \description{
-Takes the result of \code{generate_p_cut_frame} and creates plot
-lists based on our choise of RMSE function.
+Takes the result of \code{generate_p_cut_frame} and creates plot lists based on our choice of RMSE function.
 }

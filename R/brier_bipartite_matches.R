@@ -1,14 +1,15 @@
-#' Computes all matches, then gets the brier scores for each. Reorder by
-#' number of sinks.
+#' brier_bipartite_matches
+#'
+#' Computes all matches, then gets the brier scores for each.
 #'
 #' @inheritParams all_bipartite_matches
 #' @inheritParams brier_score_cv
 #' @return List of matches within sink values,
 #'  and brier scores for each.
-#' @param match_method ***
-#' @param propensity_list ***
-#' @param sqrt_mahal ***
-#' @param silent ***
+#' @param match_method "with_replacement", "optimal", or "greedy"
+#' @param propensity_list Default NULL. List of propensity scores.
+#' @param sqrt_mahal Whether to use square root of Mahalanobis distances.
+#' @param silent Whether to suppress messages as it's running.
 #'
 #' @export
 brier_bipartite_matches <- function(x_mat,

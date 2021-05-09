@@ -2,7 +2,7 @@
 % Please edit documentation in R/create_caliper.R
 \name{create_caliper}
 \alias{create_caliper}
-\title{Creates caliper penalties}
+\title{create_caliper}
 \usage{
 create_caliper(caliper_list, treat_vec = NULL)
 }
@@ -16,9 +16,5 @@ A matrix, either square (\code{|caliper_vec| x |caliper_vec|})
   or else \code{sum(treat_vec == 1) x sum(treat_vec == 0)}.
 }
 \description{
-Given a vector, \code{caliper_vec}, this function sets penalties
-for any pairwise differences above \code{caliper_max}; either
-an \code{Inf} penalty (the default), or a continuous penalty. Typical usage will
-then add the resulting matrix from this function onto a distance
-matrix, say from pairwise Mahalanobis.
+Creates caliper penalties.
 }

@@ -2,8 +2,7 @@
 % Please edit documentation in R/example_treat_prob_generator.R
 \name{example_treat_prob_generator}
 \alias{example_treat_prob_generator}
-\title{An example function that generates treatment probabilities
-given an input matrix.}
+\title{example_treat_prob_generator}
 \usage{
 example_treat_prob_generator(x_mat)
 }
@@ -14,6 +13,6 @@ example_treat_prob_generator(x_mat)
 A vector of probabilities, with length equal to \code{nrow(x_mat)}.
 }
 \description{
-An example function that generates treatment probabilities
+Function that generates treatment probabilities
 given an input matrix.
 }

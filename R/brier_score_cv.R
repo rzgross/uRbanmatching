@@ -1,8 +1,10 @@
+#' brier_score_cv
+#'
 #' For a match, calculates brier score using cross validation
 #'
 #' @inheritParams permutation_brier
-#' @param num_folds how many CV folds to use
-#' @return brier score (averaged over all units)
+#' @param num_folds Number of CV folds to use
+#' @return Brier score (averaged over all units)
 #'
 #' @export
 brier_score_cv <- function(x_mat,

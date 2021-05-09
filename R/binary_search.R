@@ -1,3 +1,5 @@
+#' binary_search
+#'
 #' Generic binary search algo: finding the input.
 #'
 #' @param target_value The value the function should achieve.

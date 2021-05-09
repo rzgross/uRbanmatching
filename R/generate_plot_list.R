@@ -1,10 +1,10 @@
-#' Takes the result of \code{generate_p_cut_frame} and creates plot
-#' lists based on our choise of RMSE function.
+#' generate_plot_list
+#'
+#' Takes the result of \code{generate_p_cut_frame} and creates plot lists based on our choice of RMSE function.
 #'
 #' @param full_plot_frame Result from \code{generate_p_cut_frame}.
-#' @param rmse_func Function that takes in a vector of estimates and computes
-#'   an RMSE.
-#' @param silent If you don't want to log anything.
+#' @param rmse_func Function that takes in a vector of estimates and computes an RMSE.
+#' @param silent Whether to suppress messages as it's running.. Default \code{!interactive()}.
 #'
 #' @export
 generate_plot_list <- function(full_plot_frame,

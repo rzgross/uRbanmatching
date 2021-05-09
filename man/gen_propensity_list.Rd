@@ -2,8 +2,7 @@
 % Please edit documentation in R/gen_propensity_list.R
 \name{gen_propensity_list}
 \alias{gen_propensity_list}
-\title{Takes in elements needed for propensity work, checks input and
-builds a named list.}
+\title{gen_propensity_list}
 \usage{
 gen_propensity_list(
   propensity_function = propensity_score_xgb(),
@@ -12,22 +11,15 @@ gen_propensity_list(
 )
 }
 \arguments{
-\item{propensity_function}{A function that accepts a list
-with four elements: \code{x_train}, \code{x_test},
-\code{y_train}, \code{y_test}, and forms predictions
-using \code{x_test} (I guess \code{y_test} isn't used yet)}
+\item{propensity_function}{A function that accepts a list with four elements: \code{x_train}, \code{x_test}, \code{y_train}, \code{y_test}, and forms predictions using \code{x_test} (I guess \code{y_test} isn't used yet)}
 
-\item{oos_propensity}{Logical, do you want to predict out of sample
-for the propensity score? Most people don't, and indeed \code{FALSE}
-is the default.}
+\item{oos_propensity}{Logical, whether to predict out of sample for the propensity score.}
 
-\item{n_folds}{Default NULL; how many folds you want if using
-out of sample propensity.}
+\item{n_folds}{Default NULL; how many folds if using out of sample propensity.}
 }
 \value{
 Named list, same names as input params.
 }
 \description{
-Takes in elements needed for propensity work, checks input and
-builds a named list.
+Takes in elements needed for propensity function, checks input and builds a named list.
 }

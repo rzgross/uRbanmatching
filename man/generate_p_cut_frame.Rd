@@ -2,7 +2,7 @@
 % Please edit documentation in R/generate_p_cut_frame.R
 \name{generate_p_cut_frame}
 \alias{generate_p_cut_frame}
-\title{Processes the data into the format required for plotting.}
+\title{generate_p_cut_frame}
 \usage{
 generate_p_cut_frame(
   full_raw_results,
@@ -13,10 +13,9 @@ generate_p_cut_frame(
 \arguments{
 \item{full_raw_results}{Dataframe of results (spec to come)}
 
-\item{p_cut_vals}{Vector of cut values to plot.
-\code{rmse_from_one_func}, which gives RMSE relative to one.}
+\item{p_cut_vals}{Vector of cut values to plot.}
 
-\item{silent}{***}
+\item{silent}{Whether to suppress messages as it's running.. Default \code{!interactive()}.}
 }
 \value{
 List per \code{n_rows} value of a dataframe ready to be plotted.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/brier_score_split.R
 \name{brier_score_split}
 \alias{brier_score_split}
-\title{For a match, calculates brier score on a test split of the data}
+\title{brier_score_split}
 \usage{
 brier_score_split(
   x_mat,
@@ -19,13 +19,13 @@ brier_score_split(
 
 \item{design}{see \code{predict_prepare}}
 
-\item{train_fraction}{split of data to use for training}
+\item{train_fraction}{Split of data to use for training}
 
 \item{match_predict_function}{function to predict treated units}
 }
 \value{
-brier score
+Brier score
 }
 \description{
-For a match, calculates brier score on a test split of the data
+For a match, calculates brier score on a test split of the data.
 }

@@ -2,18 +2,18 @@
 % Please edit documentation in R/fold_indexing.R
 \name{fold_indexing}
 \alias{fold_indexing}
-\title{Produces a list of indices split into k-folds}
+\title{fold_indexing}
 \usage{
 fold_indexing(index_length, num_folds)
 }
 \arguments{
-\item{index_length}{length of vector to index}
+\item{index_length}{Length of vector to index}
 
-\item{num_folds}{how many folds you need}
+\item{num_folds}{Number of folds to use.}
 }
 \value{
-list of vectors of indices
+List of vectors of indices
 }
 \description{
-Produces a list of indices split into k-folds
+Produces a list of indices split into k-folds.
 }

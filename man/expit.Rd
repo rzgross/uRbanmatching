@@ -2,7 +2,7 @@
 % Please edit documentation in R/expit.R
 \name{expit}
 \alias{expit}
-\title{exp / 1 + exp}
+\title{expit}
 \usage{
 expit(x)
 }
@@ -13,5 +13,5 @@ expit(x)
 numeric vector, now in (0, 1)
 }
 \description{
-exp / 1 + exp
+Computes exp / 1 + exp, which is used in several functions.
 }

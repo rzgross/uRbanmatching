@@ -1,3 +1,5 @@
+#' boot_func
+#'
 #' Resampling bootstrap of a vector for a given function.
 #'
 #' @param vec Vector to bootstrap resample from.

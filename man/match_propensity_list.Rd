@@ -13,17 +13,11 @@ match_propensity_list(
 )
 }
 \arguments{
-\item{propensity_function}{A function that accepts a list
-with four elements: \code{x_train}, \code{x_test},
-\code{y_train}, \code{y_test}, and forms predictions
-using \code{x_test} (I guess \code{y_test} isn't used yet)}
+\item{propensity_function}{A function that accepts a list with four elements: \code{x_train}, \code{x_test}, \code{y_train}, \code{y_test}, and forms predictions using \code{x_test} (I guess \code{y_test} isn't used yet)}
 
-\item{oos_propensity}{Logical, do you want to predict out of sample
-for the propensity score? Most people don't, and indeed \code{FALSE}
-is the default.}
+\item{oos_propensity}{Logical, whether to predict out of sample for the propensity score.}
 
-\item{n_folds}{Default NULL; how many folds you want if using
-out of sample propensity.}
+\item{n_folds}{Default NULL; how many folds if using out of sample propensity.}
 
 \item{caliper_sd_mult}{We'll set the maximum gap between units
 as \code{sd(propensity_score) * k}, where this parameter is the

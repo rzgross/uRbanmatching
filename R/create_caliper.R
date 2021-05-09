@@ -1,10 +1,6 @@
-#' Creates caliper penalties
+#' create_caliper
 #'
-#' Given a vector, \code{caliper_vec}, this function sets penalties
-#' for any pairwise differences above \code{caliper_max}; either
-#' an \code{Inf} penalty (the default), or a continuous penalty. Typical usage will
-#' then add the resulting matrix from this function onto a distance
-#' matrix, say from pairwise Mahalanobis.
+#' Creates caliper penalties.
 #'
 #' @param caliper_list Result of \code{gen_caliper_list}
 #' @param treat_vec Optional; if you only want pairs between treat and control.

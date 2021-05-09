@@ -28,7 +28,7 @@ propensity_bipartite_matches(
 
 \item{caliper_list}{Forces matches that are close on some metric.}
 
-\item{sqrt_mahal}{Whether to use square root of mahalanobis distances.}
+\item{sqrt_mahal}{Whether to use square root of Mahalanobis distances.}
 
 \item{tol_val}{For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.}
 }

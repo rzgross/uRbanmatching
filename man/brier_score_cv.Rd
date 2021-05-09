@@ -2,7 +2,7 @@
 % Please edit documentation in R/brier_score_cv.R
 \name{brier_score_cv}
 \alias{brier_score_cv}
-\title{For a match, calculates brier score using cross validation}
+\title{brier_score_cv}
 \usage{
 brier_score_cv(
   x_mat,
@@ -19,12 +19,12 @@ brier_score_cv(
 
 \item{design}{see \code{predict_prepare}}
 
-\item{num_folds}{how many CV folds to use}
+\item{num_folds}{Number of CV folds to use}
 
 \item{match_predict_function}{function to predict treated units}
 }
 \value{
-brier score (averaged over all units)
+Brier score (averaged over all units)
 }
 \description{
 For a match, calculates brier score using cross validation

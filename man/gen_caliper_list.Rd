@@ -2,25 +2,20 @@
 % Please edit documentation in R/gen_caliper_list.R
 \name{gen_caliper_list}
 \alias{gen_caliper_list}
-\title{Simple wrapper to unify caliper input}
+\title{gen_caliper_list}
 \usage{
 gen_caliper_list(caliper_vec = NULL, caliper_max = NULL, continuous_mult = 100)
 }
 \arguments{
-\item{caliper_vec}{Default NULL; numeric vector that "blocks"
-matches if they're too (further than \code{caliper_max}) on this value}
+\item{caliper_vec}{Default NULL; numeric vector that stops matches if beyond \code{caliper_max}.}
 
-\item{caliper_max}{The maximum allowed difference (exactly this difference
-is allowed).}
+\item{caliper_max}{The maximum allowed difference.}
 
-\item{continuous_mult}{The value to multiply differences above caliper max.
-Set as \code{Inf} to have infinite penalties, i.e. block matches above
-the max.}
+\item{continuous_mult}{The value to multiply differences above caliper max. Set as \code{Inf} to have infinite penalties.}
 }
 \value{
-Either \code{NULL}, or a list with the same names as the input, after checking
-  values.
+Either \code{NULL}, or a list with the same names as the input, after checking values.
 }
 \description{
-Simple wrapper to unify caliper input
+Wrapper function to unify caliper input.
 }

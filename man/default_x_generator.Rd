@@ -2,19 +2,18 @@
 % Please edit documentation in R/default_x_generator.R
 \name{default_x_generator}
 \alias{default_x_generator}
-\title{A default function that generates an input data matrix.}
+\title{default_x_generator}
 \usage{
 default_x_generator(n_rows, n_cols)
 }
 \arguments{
-\item{n_rows}{How many rows to produce.}
+\item{n_rows}{Number ofrows to produce.}
 
-\item{n_cols}{How many columns to produce.}
+\item{n_cols}{Number of columns to produce.}
 }
 \value{
-A matrix of data
+A matrix of data.
 }
 \description{
-First generates a random covariance, then generates
-normal data with that covariance (actually correlation).
+Function that generates an input data matrix. Used as default in \code{generate_simulation_input}.
 }

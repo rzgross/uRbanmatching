@@ -1,5 +1,6 @@
-#' Constructs a k-fold list of \code{index_list} objects for a given
-#' \code{match_list}
+#' generate_k_fold_index
+#'
+#' Constructs a k-fold list of \code{index_list} objects for a given \code{match_list}
 #'
 #' @param match_list typical \code{match_list} entry
 #' @param num_folds how many folds you want, default 5

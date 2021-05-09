@@ -1,24 +1,18 @@
-#' Takes in functions to generate simulation data, and computes
-#' simulation results for our method and some competitors
+#' compute_sim_result
+#'
+#' Takes in functions to generate simulation data, and computes simulation results for our method vs. Mahalanobis and propensity score matching.
 #'
 #' @inheritParams generate_simulation_input
 #' @inheritParams all_bipartite_matches
-#' @param n_sink_gen Default \code{n_sink_generator}, and you'll
-#'   probably want to use that: this argument should be a function that
-#'   accepts a \code{treat_vec} and produces a vector of sink numbers.
+#' @param n_sink_gen Default \code{n_sink_generator}. This argument should be a function that accepts a \code{treat_vec} and produces a vector of sink numbers.
 #' @param num_weight_vectors How many weight vectors to generate.
-#' @param silent Default \code{!interactive()}, if you want to
-#'   suppress messages.
+#' @param silent Whether to suppress messages as it's running.. Default \code{!interactive()}.
 #' @return Returns a named list:
 #' \describe{
-#'     \item{\code{naive_est}}{Just a number: mean difference between all
-#'   treated units and all control}
-#'     \item{\code{propensity_results}}{List of lists: each with
-#'   \code{n_sinks} and the \code{est}}
+#'     \item{\code{naive_est}}{Mean difference between all treated units and all control}
+#'     \item{\code{propensity_results}}{List of lists: each with \code{n_sinks} and the \code{est}}
 #'     \item{\code{mahal_results}}{Same as above}
-#'     \item{\code{weighted_results}}{List of lists: each with
-#'   \code{n_sinks}, the raw brier score, the permutation brier score,
-#'   and the \code{est}}
+#'     \item{\code{weighted_results}}{List of lists: each with \code{n_sinks}, the raw brier score, the permutation brier score, and the \code{est}}
 #' }
 #'
 #' @export

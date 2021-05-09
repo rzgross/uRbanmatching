@@ -1,5 +1,7 @@
 #' all_bipartite_matches
 #'
+#' Computes all matches for the given choice of matching method.
+#'
 #' @param x_mat Input/design matrix
 #' @param cov_x The covariance of \code{x_mat}. Can be rank_adjusted by using \code{covariance_with_ranks}.
 #' @param weight_list List of weight vectors. See `generate_random_weights` to
@@ -10,7 +12,7 @@
 #' @param tol_val For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.
 #' @param match_method "with_replacement", "optimal", or "greedy"
 #' @param propensity_list Default NULL. List of propensity scores.
-#' @param sqrt_mahal Whether to use square root of mahalanobis distances.
+#' @param sqrt_mahal Whether to use square root of Mahalanobis distances.
 #' @import stats
 #' @export
 

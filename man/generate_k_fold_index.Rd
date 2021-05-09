@@ -2,8 +2,7 @@
 % Please edit documentation in R/generate_k_fold_index.R
 \name{generate_k_fold_index}
 \alias{generate_k_fold_index}
-\title{Constructs a k-fold list of \code{index_list} objects for a given
-\code{match_list}}
+\title{generate_k_fold_index}
 \usage{
 generate_k_fold_index(match_list, num_folds = 5L)
 }
@@ -13,6 +12,5 @@ generate_k_fold_index(match_list, num_folds = 5L)
 \item{num_folds}{how many folds you want, default 5}
 }
 \description{
-Constructs a k-fold list of \code{index_list} objects for a given
-\code{match_list}
+Constructs a k-fold list of \code{index_list} objects for a given \code{match_list}
 }

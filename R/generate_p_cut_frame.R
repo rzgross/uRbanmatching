@@ -1,10 +1,11 @@
+#' generate_p_cut_frame
+#'
 #' Processes the data into the format required for plotting.
 #'
 #' @param full_raw_results Dataframe of results (spec to come)
 #' @param p_cut_vals Vector of cut values to plot.
-#'   \code{rmse_from_one_func}, which gives RMSE relative to one.
 #' @return List per \code{n_rows} value of a dataframe ready to be plotted.
-#' @param silent ***
+#' @param silent Whether to suppress messages as it's running.. Default \code{!interactive()}.
 #'
 #' @export
 generate_p_cut_frame <- function(full_raw_results,

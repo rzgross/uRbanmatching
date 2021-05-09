@@ -2,17 +2,16 @@
 % Please edit documentation in R/default_error_generator.R
 \name{default_error_generator}
 \alias{default_error_generator}
-\title{Default function to generate mean-zero noise. Very simple.}
+\title{default_error_generator}
 \usage{
 default_error_generator(n_rows)
 }
 \arguments{
-\item{n_rows}{How many rows to produce.}
+\item{n_rows}{Number of rows to produce.}
 }
 \value{
 Returns just mean 0 variance 1 normal noise.
 }
 \description{
-Exported just so all functions have a default in
-\code{generate_simulation_input}.
+Function to generate mean-zero noise. Used as default in \code{generate_simulation_input}.
 }

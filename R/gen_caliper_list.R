@@ -1,14 +1,11 @@
-#' Simple wrapper to unify caliper input
+#' gen_caliper_list
 #'
-#' @param caliper_vec Default NULL; numeric vector that "blocks"
-#'   matches if they're too (further than \code{caliper_max}) on this value
-#' @param caliper_max The maximum allowed difference (exactly this difference
-#'   is allowed).
-#' @param continuous_mult The value to multiply differences above caliper max.
-#'   Set as \code{Inf} to have infinite penalties, i.e. block matches above
-#'   the max.
-#' @return Either \code{NULL}, or a list with the same names as the input, after checking
-#'   values.
+#' Wrapper function to unify caliper input.
+#'
+#' @param caliper_vec Default NULL; numeric vector that stops matches if beyond \code{caliper_max}.
+#' @param caliper_max The maximum allowed difference.
+#' @param continuous_mult The value to multiply differences above caliper max. Set as \code{Inf} to have infinite penalties.
+#' @return Either \code{NULL}, or a list with the same names as the input, after checking values.
 #'
 #' @export
 gen_caliper_list <- function(caliper_vec = NULL,

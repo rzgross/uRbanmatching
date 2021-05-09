@@ -35,10 +35,10 @@ automatically generate a reasonable set of vectors.}
 
 \item{propensity_list}{Default NULL. List of propensity scores.}
 
-\item{sqrt_mahal}{Whether to use square root of mahalanobis distances.}
+\item{sqrt_mahal}{Whether to use square root of Mahalanobis distances.}
 
 \item{tol_val}{For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.}
 }
 \description{
-all_bipartite_matches
+Computes all matches for the given choice of matching method.
 }

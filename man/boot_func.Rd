@@ -2,7 +2,7 @@
 % Please edit documentation in R/boot_func.R
 \name{boot_func}
 \alias{boot_func}
-\title{Resampling bootstrap of a vector for a given function.}
+\title{boot_func}
 \usage{
 boot_func(vec, func, resamples = 100L)
 }

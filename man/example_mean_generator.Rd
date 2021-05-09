@@ -2,8 +2,7 @@
 % Please edit documentation in R/example_mean_generator.R
 \name{example_mean_generator}
 \alias{example_mean_generator}
-\title{An example function that generates a mean vector
-given an input matrix.}
+\title{example_mean_generator}
 \usage{
 example_mean_generator(x_mat)
 }
@@ -14,6 +13,5 @@ example_mean_generator(x_mat)
 A vector of means, with length equal to \code{nrow(x_mat)}.
 }
 \description{
-An example function that generates a mean vector
-given an input matrix.
+Function that generates a mean vector given an input matrix.
 }

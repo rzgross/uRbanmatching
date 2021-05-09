@@ -1,4 +1,6 @@
-#' An example function that generates treatment probabilities
+#' example_treat_prob_generator
+#'
+#' Function that generates treatment probabilities
 #' given an input matrix.
 #'
 #' @param x_mat Numeric matrix.

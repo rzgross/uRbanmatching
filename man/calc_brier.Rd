@@ -2,7 +2,7 @@
 % Please edit documentation in R/calc_brier.R
 \name{calc_brier}
 \alias{calc_brier}
-\title{Simple brier score calc}
+\title{calc_brier}
 \usage{
 calc_brier(predict, outcome, avg = TRUE)
 }
@@ -11,12 +11,11 @@ calc_brier(predict, outcome, avg = TRUE)
 
 \item{outcome}{result (in \eqn{\{0, 1\}})}
 
-\item{avg}{logica, default TRUE, do you want the mean?}
+\item{avg}{Whether to use the mean.}
 }
 \value{
-length one double: the total brier sum, or the avg (default)
+Length one double: the total brier sum, or the avg (default)
 }
 \description{
-Simple brier score calc
+Simple brier score calculation
 }
-\keyword{internal}

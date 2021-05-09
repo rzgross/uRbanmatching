@@ -36,9 +36,7 @@ an expected value for each row.}
 generates an error vector (e.g. generates normal noise). Should
 generate zero-mean data.}
 
-\item{n_sink_gen}{Default \code{n_sink_generator}, and you'll
-probably want to use that: this argument should be a function that
-accepts a \code{treat_vec} and produces a vector of sink numbers.}
+\item{n_sink_gen}{Default \code{n_sink_generator}. This argument should be a function that accepts a \code{treat_vec} and produces a vector of sink numbers.}
 
 \item{match_method}{"with_replacement", "optimal", or "greedy"}
 
@@ -58,8 +56,7 @@ accepts a \code{treat_vec} and produces a vector of sink numbers.}
 
 \item{names_list}{***}
 
-\item{silent}{Default \code{!interactive()}, if you want to
-suppress messages.}
+\item{silent}{Whether to suppress messages as it's running.. Default \code{!interactive()}.}
 }
 \description{
 Run \code{compute_sim_result} in parallel using \code{parallel::mclapply}

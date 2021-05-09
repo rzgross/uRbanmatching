@@ -1,5 +1,6 @@
-#' An example function that generates a mean vector
-#' given an input matrix.
+#' example_mean_generator
+#'
+#' Function that generates a mean vector given an input matrix.
 #'
 #' @param x_mat Numeric matrix.
 #' @return A vector of means, with length equal to \code{nrow(x_mat)}.
