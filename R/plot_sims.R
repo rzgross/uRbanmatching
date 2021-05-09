@@ -26,12 +26,12 @@ plot_sims <- function(all_results,
   par(xpd = TRUE)
   par(mar = c(1, 1, 1, 1))
 
-  plot_results_block(all_results[["500"]],
+  plot_results_block(all_results[["250"]],
                      x_lim = c(0, 0.95),
                      y_lim = c(.3, 1.8) + y_push,
                      y_rel
   )
-  plot_results_block(all_results[["1000"]],
+  plot_results_block(all_results[["750"]],
                      x_lim = c(1.05, 2) + x_push,
                      y_lim = c(.3, 1.8) + y_push,
                      y_rel
@@ -94,6 +94,6 @@ plot_sims <- function(all_results,
     y = c(0.95, 0.88),
     adj = c(0, 0.5),
     cex = c(1, 0.8),
-    labels = c("CI, +-2 se", "(bootstrapped)")
+    labels = c("CI, +-2 se")
   )
 }
