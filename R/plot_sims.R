@@ -42,7 +42,7 @@ plot_sims <- function(all_results,
     x = c(0.475, 1.525) + x_push * c(0, 1),
     y = c(1.8, 1.8) + c(y_push, y_push),
     adj = c(0.5, 0.5),
-    labels = paste("n = ", c(500, 1000)),
+    labels = paste("n = ", c(250, 750)),
     cex = 1.2
   )
 
@@ -90,10 +90,10 @@ plot_sims <- function(all_results,
   )
 
   text(
-    x = rep(2 + x_push * 2.9, 2),
-    y = c(0.95, 0.88),
-    adj = c(0, 0.5),
-    cex = c(1, 0.8),
-    labels = c("CI, +-2 se")
+    x = 2 + x_push * 2.9,
+    y = 0.95,
+    adj = 0,
+    cex = 1,
+    labels = "CI, +-2 se"
   )
 }
