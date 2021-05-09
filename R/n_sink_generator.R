@@ -1,12 +1,11 @@
-#' Generates a function that generates a vector of sink lengths
+#' n_sink_generator
 #'
-#' This function returns a function that accepts a treatment vector
-#' and generates a vector of numbers to be used as sink counts.
+#' Generates a function that generates a vector of sink lengths.
+#'
 #' @param start_frac Smaller fraction of units to use as sink number, default 0.
 #' @param end_frac Larger fraction of units to use as sink number, default 0.8.
 #' @param length_out How many sink values we want, default 9.
-#' @return Function that accepts a \code{treat_vec}
-#'   and returns a vector of numbers.
+#' @return Function that accepts a \code{treat_vec} and returns a vector of numbers.
 #'
 #' @export
 n_sink_generator <- function(start_frac = 0,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/propensity_score.R
 \name{propensity_score}
 \alias{propensity_score}
-\title{Calculates propensity scores for a given matrix and treatment vector}
+\title{propensity_score}
 \usage{
 propensity_score(x_mat, treat_vec, propensity_list = gen_propensity_list())
 }
@@ -14,12 +14,8 @@ propensity_score(x_mat, treat_vec, propensity_list = gen_propensity_list())
 \item{propensity_list}{See \code{gen_propensity_list}}
 }
 \value{
-Returns a vector equal in length to treat_vec of propensity.
-  score.
+Returns a vector equal in length to treat_vec of propensity score.
 }
 \description{
-This function takes in an input matrix and a treatment vector,
-along with a function that makes predictions (default xgboost method given)
-and returns a predicted probability of treatment for each unit, either
-using in-sample or out-of-sample fits.
+Calculates propensity scores for a given matrix and treatment vector. Takes in an input matrix and a treatment vector, along with a function that makes predictions (default xgboost method given) and returns a predicted probability of treatment for each unit, either using in-sample or out-of-sample fits.
 }

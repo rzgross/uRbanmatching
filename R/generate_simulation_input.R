@@ -1,4 +1,6 @@
-#' Generates input needed for a simulation run
+#' generate_simulation_input
+#'
+#' Generates input needed for a simulation run.
 #'
 #' @param n_rows How many rows to generate.
 #' @param n_cols How many columns to use.
@@ -8,9 +10,7 @@
 #'   treatment probabilities.
 #' @param mean_generator Function that takes a matrix and produces
 #'   an expected value for each row.
-#' @param error_generator Function that accepts a number of rows and
-#'   generates an error vector (e.g. generates normal noise). Should
-#'   generate zero-mean data.
+#' @param error_generator Function that accepts a number of rows and generates an error vector (e.g. normal noise).
 #' @return List:
 #' \describe{
 #'   \item{\code{x_mat}}{Data Matrix}

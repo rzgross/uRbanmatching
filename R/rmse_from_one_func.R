@@ -1,7 +1,9 @@
-#' Calculates RMSE with a known target of one
+#' rmse_from_one_func
+#'
+#' Calculates RMSE with a known target of one.
 #'
 #' @param vec Vector of estimates around 1.
-#' @return Returns a single number: the RMSE
+#' @return Returns a single number: the RMSE.
 #'
 #' @export
 rmse_from_one_func <- function(vec) {

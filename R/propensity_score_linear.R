@@ -1,12 +1,11 @@
-#' Function factory to predict treatment using \code{glm} (binomial)
-#' or \code{lm}
+#' propensity_score_linear
 #'
-#' Does simple wrap around \code{glm} / \code{lm}
-#' The returned function accepts one parameter, \code{train_test_list},
-#' a list with \code{x_train}, \code{x_test}, \code{y_train}, \code{y_test}
+#' Function to predict treatment using \code{glm} (binomial) or \code{lm}.
+#'
+#' @param use_linear_lm Whether to use lm or glm.
+#'
 #' @return returns a function that accepts \code{train_test_list}
 #' and this returns a vector of predictions for the test data
-#' @param use_linear_lm ***
 #' @export
 propensity_score_linear <- function(use_linear_lm = FALSE) {
   function(train_test_list) {

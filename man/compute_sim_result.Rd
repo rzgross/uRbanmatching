@@ -27,9 +27,7 @@ treatment probabilities.}
 \item{mean_generator}{Function that takes a matrix and produces
 an expected value for each row.}
 
-\item{error_generator}{Function that accepts a number of rows and
-generates an error vector (e.g. generates normal noise). Should
-generate zero-mean data.}
+\item{error_generator}{Function that accepts a number of rows and generates an error vector (e.g. normal noise).}
 
 \item{n_sink_gen}{Default \code{n_sink_generator}. This argument should be a function that accepts a \code{treat_vec} and produces a vector of sink numbers.}
 

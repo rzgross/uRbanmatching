@@ -2,23 +2,18 @@
 % Please edit documentation in R/index_list_from_match.R
 \name{index_list_from_match}
 \alias{index_list_from_match}
-\title{Constructs an \code{index_list} from a \code{match_list} and a logical
-index for training data}
+\title{index_list_from_match}
 \usage{
 index_list_from_match(match_list, train_index)
 }
 \arguments{
 \item{match_list}{see \code{bipartite_matches} etc}
 
-\item{train_index}{logical index, same length as
-\code{match_list[["treat_index"]]} (and
-\code{match_list[["control_index"]]})}
+\item{train_index}{logical index, same length as \code{match_list[["treat_index"]]} (and \code{match_list[["control_index"]]})}
 }
 \value{
-returns an \code{index_list} object, see
-  \code{predict_prepare}
+returns an \code{index_list} object, see \code{predict_prepare}
 }
 \description{
-Constructs an \code{index_list} from a \code{match_list} and a logical
-index for training data
+Constructs an \code{index_list} from a \code{match_list} and a logical index for training data/
 }

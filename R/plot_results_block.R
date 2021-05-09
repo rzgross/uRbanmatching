@@ -1,3 +1,16 @@
+#' permutation_matches
+#'
+#' Used in plot_sims to generate the plot specifications.
+#'
+#' @param n_results Number of plots to generate.
+#' @param x_lim X limits.
+#' @param y_lim Y limits.
+#' @param y_rel Y relative size.
+#' @param rect_width Plot width.
+#' @param x_shift Horizontal spacing between plots.
+#'
+#' @export
+
 plot_results_block <- function(n_results,
                                x_lim,
                                y_lim,

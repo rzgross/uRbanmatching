@@ -2,7 +2,7 @@
 % Please edit documentation in R/propensity_score_xgb.R
 \name{propensity_score_xgb}
 \alias{propensity_score_xgb}
-\title{Function factory to predict treatment using xgboost}
+\title{propensity_score_xgb}
 \usage{
 propensity_score_xgb(
   nrounds = 50,
@@ -12,23 +12,17 @@ propensity_score_xgb(
 )
 }
 \arguments{
-\item{nrounds}{training rounds for the xgb algorithm}
+\item{nrounds}{Training rounds for the xgb algorithm.}
 
-\item{nthread}{threads to use for fitting, default 1...}
+\item{nthread}{Number of threads to use for fitting, default 1.}
 
-\item{params}{list of params to pass to xgboost,
-most likely something like \code{eta} and \code{max.depth}}
+\item{params}{List of params to pass to xgboost, most likely something like \code{eta} and \code{max.depth}}
 
-\item{...}{***}
+\item{...}{Additional xgboost params.}
 }
 \value{
-returns a function that accepts \code{train_test_list}
-and this returns a vector of predictions for the test data
+returns a function that accepts \code{train_test_list} and this returns a vector of predictions for the test data
 }
 \description{
-This operates the exact same as \code{match_predict_xgb}, which
-is itself quite a simple wrap of regular xgboost code.
-Main difference here is the input data is even simpler.
-The returned function accepts one parameter, \code{train_test_list},
-a list with \code{x_train}, \code{x_test}, \code{y_train}, \code{y_test}
+Function factory to predict treatment using xgboost.
 }

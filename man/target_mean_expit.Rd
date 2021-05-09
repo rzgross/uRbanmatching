@@ -2,8 +2,7 @@
 % Please edit documentation in R/target_mean_expit.R
 \name{target_mean_expit}
 \alias{target_mean_expit}
-\title{Shifts the linear component until the mean of the
-expit is the target mean.}
+\title{target_mean_expit}
 \usage{
 target_mean_expit(target_mean, linear_vector)
 }
@@ -13,10 +12,8 @@ target_mean_expit(target_mean, linear_vector)
 \item{linear_vector}{Basically \eqn{X \beta} (no shift).}
 }
 \value{
-\code{expit(linear_vector + a)} for some \code{a} such that
-  \code{mean(expit(linear_vector + a))} is close to \code{target_mean}.
+\code{expit(linear_vector + a)} for some \code{a} such that \code{mean(expit(linear_vector + a))} is close to \code{target_mean}.
 }
 \description{
-Shifts the linear component until the mean of the
-expit is the target mean.
+Shifts the linear component until the mean of the expit is the target mean.
 }

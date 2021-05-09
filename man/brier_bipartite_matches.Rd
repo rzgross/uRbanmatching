@@ -43,11 +43,11 @@ automatically generate a reasonable set of vectors.}
 
 \item{tol_val}{For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.}
 
-\item{design}{see \code{predict_prepare}}
+\item{design}{See \code{predict_prepare}}
 
 \item{num_folds}{Number of CV folds to use}
 
-\item{match_predict_function}{function to predict treated units}
+\item{match_predict_function}{Function to predict treated units.}
 
 \item{silent}{Whether to suppress messages as it's running.}
 }

@@ -1,4 +1,7 @@
-#' Propensity match for (default) bipartite
+#' propensity_bipartite_matches
+#'
+#' Propensity match for bipartite matching.
+#'
 #' @inheritParams all_bipartite_matches
 #' @param propensity_list See \code{gen_propensity_list}
 #'

@@ -1,14 +1,10 @@
-#' Generates the propensity parameters used for using propensity-based calipers
+#' match_propensity_list
 #'
-#' We use this for input for \code{all_propensity_caliper_matches} (and
-#' likely a nonbipartite version soon).
+#' Generates the propensity parameters used for using propensity-based calipers.
+#'
 #' @inheritParams gen_propensity_list
-#' @param caliper_sd_mult We'll set the maximum gap between units
-#'   as \code{sd(propensity_score) * k}, where this parameter is the
-#'   value k. Default 0.6.
-#' @param continuous_mult See e.g. \code{gen_caliper_list}: instead of
-#'   blocking matches that are "too far apart" on the caliper, we'll
-#'   add a penalty for going above.
+#' @param caliper_sd_mult Maximum gap between units.In \code{sd(propensity_score) * k}, where this parameter is the value k. Default 0.6.
+#' @param continuous_mult Penality for going above a certain caliper.
 #' @return list with names equal to all input params
 #' @export
 match_propensity_list <- function(propensity_function = propensity_score_xgb(),

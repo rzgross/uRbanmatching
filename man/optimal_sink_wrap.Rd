@@ -2,8 +2,7 @@
 % Please edit documentation in R/optimal_sink_wrap.R
 \name{optimal_sink_wrap}
 \alias{optimal_sink_wrap}
-\title{Given a vector of sink values, generates an optimal match
-for each.}
+\title{optimal_sink_wrap}
 \usage{
 optimal_sink_wrap(dist_mat, treat_vec, n_sinks, tol_val, weight_vec = NULL)
 }
@@ -13,18 +12,15 @@ optimal_sink_wrap(dist_mat, treat_vec, n_sinks, tol_val, weight_vec = NULL)
 \item{treat_vec}{Vector representing all subjects; 0 for control,
 1 for treated.}
 
-\item{n_sinks}{default NULL, vector of sink values to use.}
+\item{n_sinks}{Default NULL, vector of sink values to use.}
 
 \item{tol_val}{Tolerance for solving optimal matches (how far from the true optimal value is acceptable). Speed with large value, accuracy with small.}
 
-\item{weight_vec}{Default \code{NULL}: optionally supply the weight vector
-used to generate \code{dist_mat} and it'll be returned in the
-\code{match_list} generated from this function}
+\item{weight_vec}{Default \code{NULL}: optionally supply the weight vector used to generate \code{dist_mat} and it'll be returned in the \code{match_list} generated from this function.}
 }
 \value{
-list of lists; see parent function
+List of lists.
 }
 \description{
-Will be slow; you can't just generate one match and subset from it.
+Given a vector of sink values, generates an optimal match for each.
 }
-\keyword{internal}

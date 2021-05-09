@@ -2,18 +2,18 @@
 % Please edit documentation in R/swap_pairs.R
 \name{swap_pairs}
 \alias{swap_pairs}
-\title{Given a logical swap vector, switches treated and control units around}
+\title{swap_pairs}
 \usage{
 swap_pairs(match_list, swap)
 }
 \arguments{
-\item{match_list}{typical \code{match_list} entity}
+\item{match_list}{typical \code{match_list} entity.}
 
-\item{swap}{logical vector indicating which pairs should swap}
+\item{swap}{logical vector indicating which pairs should swap.}
 }
 \value{
-another match_list, but now with swapped pairs
+Another match_list, but now with swapped pairs.
 }
 \description{
-Given a logical swap vector, switches treated and control units around
+Given a logical swap vector, switches treated and control units.
 }

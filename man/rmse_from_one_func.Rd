@@ -2,7 +2,7 @@
 % Please edit documentation in R/rmse_from_one_func.R
 \name{rmse_from_one_func}
 \alias{rmse_from_one_func}
-\title{Calculates RMSE with a known target of one}
+\title{rmse_from_one_func}
 \usage{
 rmse_from_one_func(vec)
 }
@@ -10,8 +10,8 @@ rmse_from_one_func(vec)
 \item{vec}{Vector of estimates around 1.}
 }
 \value{
-Returns a single number: the RMSE
+Returns a single number: the RMSE.
 }
 \description{
-Calculates RMSE with a known target of one
+Calculates RMSE with a known target of one.
 }

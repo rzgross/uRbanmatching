@@ -2,7 +2,7 @@
 % Please edit documentation in R/optimal_match.R
 \name{optimal_match}
 \alias{optimal_match}
-\title{Computes optimal matches, bipartite}
+\title{optimal_match}
 \usage{
 optimal_match(dist_mat, treat_vec, n_sinks = 0, tol_val = 1e-04)
 }
@@ -17,6 +17,5 @@ optimal_match(dist_mat, treat_vec, n_sinks = 0, tol_val = 1e-04)
 \item{tol_val}{Tolerance for solving optimal matches (how far from the true optimal value is acceptable). Speed with large value, accuracy with small.}
 }
 \description{
-Computes optimal matches, bipartite
+Computes optimal matches. Alternative to "greedy" and "with replacement".
 }
-\keyword{internal}

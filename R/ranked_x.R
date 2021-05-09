@@ -1,16 +1,13 @@
-#' Converts indicated columns to ranked versions of themselves
+#' ranked_x
 #'
-#' This function takes a numeric matrix and converts any columns
-#' indicated by the \code{rank_cols} input to their ranks
-#' (break ties however you want), scaled down by \code{nrow(x_mat)}.
-#' @param x_mat numeric matrix (adjust non-numeric columns prior)
-#' @param rank_cols names or index of columns to be converted to ranks
-#'   before analysis
-#' @param ties_method how to break ties in ranks, by default uses
-#'   "average" (same as the rank function's default). See \code{?rank}
+#' Converts indicated columns to ranked versions of themselves. Takes a numeric matrix and converts any columns indicated by the \code{rank_cols} input to their ranks.
+#'
+#' @param x_mat Numeric matrix (adjust non-numeric columns prior)
+#' @param rank_cols Names or index of columns to be converted to ranks
+#' @param ties_method How to break ties in ranks, by default uses "average" (same as the rank function's default).
 #'   for further options
-#' @return x_mat again, potentially adjusted for ranks
-#' @keywords internal
+#' @return x_mat, potentially adjusted for ranks
+#' @export
 ranked_x <- function(x_mat,
                      rank_cols = NULL,
                      ties_method = "average") {

@@ -1,8 +1,10 @@
-#' Computes optimal matches, bipartite
+#' optimal_match
+#'
+#' Computes optimal matches. Alternative to "greedy" and "with replacement".
 #'
 #' @inheritParams bipartite_matches
 #' @param n_sinks single value
-#' @keywords internal
+#' @export
 optimal_match <- function(dist_mat,
                           treat_vec,
                           n_sinks = 0,

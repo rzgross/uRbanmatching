@@ -1,8 +1,7 @@
-#' Generates the four different mean functions we use
-#' for simulations in the paper.
+#' paper_mean_functions
 #'
-#' We make them all mean zero for no real reason, we don't really care
-#' what the mean is.
+#' Generates the four different mean functions used for simulations in the paper.
+#'
 #' @return List of four functions that take in a matrix and
 #'   output a vector of means:
 #' \describe{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/hierarchical_random_weights.R
 \name{hierarchical_random_weights}
 \alias{hierarchical_random_weights}
-\title{Generates weights in a hierarchical setting}
+\title{hierarchical_random_weights}
 \usage{
 hierarchical_random_weights(
   prior_weights,
@@ -12,28 +12,20 @@ hierarchical_random_weights(
 )
 }
 \arguments{
-\item{prior_weights}{Must be equal to the length of your columns -
-i.e. the length of the weight vectors this function will produce.
-We'll use this to generate uniform random variables from 0 to this
-number. Can be the same value repeated if desired.}
+\item{prior_weights}{Must be equal to the length of your columns,
+i.e. the length of the weight vectors this function will produce.}
 
-\item{number_vectors}{How many weight vectors you want.}
+\item{number_vectors}{How many weight vectors to generate.}
 
-\item{minimum_weights}{If you want to set minimums, either globally or
-per column. Note that this will give this minimum, and then add random
-weights on top of that.}
+\item{minimum_weights}{If you want to set minimums weights.}
 
 \item{hierarchical_list}{List per group / category of variable:
 \describe{
   \item{\code{"index"}}{Vector of indices that this group corresponds with}
   \item{\code{"weight"}}{Weight for this group}
-  \item{\code{"variance"}}{(Optional) how much variance you want this group
-to have}
-}
-If you use this, we'll still combine it with
-`prior_weights` and `minimum_weights`}
+  \item{\code{"variance"}}{(Optional) how much variance this group will havve}
+}}
 }
 \description{
 Generates weights in a hierarchical setting
 }
-\keyword{internal}

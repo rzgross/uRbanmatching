@@ -1,15 +1,13 @@
-#' Given a vector of sink values, generates an optimal match
-#' for each.
+#' optimal_sink_wrap
 #'
-#' Will be slow; you can't just generate one match and subset from it.
+#' Given a vector of sink values, generates an optimal match for each.
+#'
 #' @inheritParams bipartite_matches
-#' @param n_sinks default NULL, vector of sink values to use.
-#' @param weight_vec Default \code{NULL}: optionally supply the weight vector
-#'   used to generate \code{dist_mat} and it'll be returned in the
-#'   \code{match_list} generated from this function
-#' @return list of lists; see parent function
+#' @param n_sinks Default NULL, vector of sink values to use.
+#' @param weight_vec Default \code{NULL}: optionally supply the weight vector used to generate \code{dist_mat} and it'll be returned in the \code{match_list} generated from this function.
+#' @return List of lists.
 #'
-#' @keywords internal
+#' @export
 optimal_sink_wrap <- function(dist_mat,
                               treat_vec,
                               n_sinks,

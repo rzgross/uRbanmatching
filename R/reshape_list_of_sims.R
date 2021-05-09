@@ -1,6 +1,6 @@
-#' Reshapes a list of simulations to a nice dataframe
+#' reshape_list_of_sims
 #'
-#' In the future this should be cleaner
+#' Reshapes a list of simulations to a nice dataframe.
 #'
 #' @param list_of_sims List of results from \code{compute_sim_results}.
 #' @param treat_model_name Name of the treatment model.
@@ -8,7 +8,7 @@
 #' @param n_rows How many rows were used.
 #' @param n_cols How many columns were used.
 #' @param num_weight_vectors How many weight vectors were used
-#' @return Data frame spreading results...
+#' @return Data frame spreading results.
 #'
 #' @export
 reshape_list_of_sims <- function(list_of_sims,

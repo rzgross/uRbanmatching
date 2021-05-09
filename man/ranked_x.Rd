@@ -2,26 +2,21 @@
 % Please edit documentation in R/ranked_x.R
 \name{ranked_x}
 \alias{ranked_x}
-\title{Converts indicated columns to ranked versions of themselves}
+\title{ranked_x}
 \usage{
 ranked_x(x_mat, rank_cols = NULL, ties_method = "average")
 }
 \arguments{
-\item{x_mat}{numeric matrix (adjust non-numeric columns prior)}
+\item{x_mat}{Numeric matrix (adjust non-numeric columns prior)}
 
-\item{rank_cols}{names or index of columns to be converted to ranks
-before analysis}
+\item{rank_cols}{Names or index of columns to be converted to ranks}
 
-\item{ties_method}{how to break ties in ranks, by default uses
-"average" (same as the rank function's default). See \code{?rank}
+\item{ties_method}{How to break ties in ranks, by default uses "average" (same as the rank function's default).
 for further options}
 }
 \value{
-x_mat again, potentially adjusted for ranks
+x_mat, potentially adjusted for ranks
 }
 \description{
-This function takes a numeric matrix and converts any columns
-indicated by the \code{rank_cols} input to their ranks
-(break ties however you want), scaled down by \code{nrow(x_mat)}.
+Converts indicated columns to ranked versions of themselves. Takes a numeric matrix and converts any columns indicated by the \code{rank_cols} input to their ranks.
 }
-\keyword{internal}

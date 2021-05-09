@@ -2,29 +2,20 @@
 % Please edit documentation in R/simple_sink_wrap.R
 \name{simple_sink_wrap}
 \alias{simple_sink_wrap}
-\title{Wraps a match_list from a simple match result and slices off
-various numbers of sinks}
+\title{simple_sink_wrap}
 \usage{
 simple_sink_wrap(simple_match_list, n_sinks = NULL, weight_vec = NULL)
 }
 \arguments{
-\item{simple_match_list}{match result from one of \code{with_replacement_match},
-\code{greedy_match}, \code{with_replacement_nbp_match} or
-\code{greedy_nbp_match}.}
+\item{simple_match_list}{match result from one of \code{with_replacement_match}, \code{greedy_match}, \code{with_replacement_nbp_match} or \code{greedy_nbp_match}.}
 
 \item{n_sinks}{default NULL, vector of sink values to use.}
 
-\item{weight_vec}{Default \code{NULL}: optionally supply the weight vector
-used to generate \code{dist_mat} and it'll be returned in the
-\code{match_list} generated from this function}
+\item{weight_vec}{Default \code{NULL}: optionally supply the weight vector used to generate \code{dist_mat} and it will be returned in the \code{match_list} generated from this function}
 }
 \value{
-list of lists; see parent function
+List of lists.
 }
 \description{
-Note that for \code{with_replacement} matching, this is the
-right thing to do, but for greedy matching with a random ordering
-it isn't obviously correct, but does give the nice property
-of more sinks = lower distances.
+Wraps a match_list from a simple match result and removes various numbers of sinks.
 }
-\keyword{internal}

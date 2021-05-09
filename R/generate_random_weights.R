@@ -1,30 +1,18 @@
+#' generate_random_weights
+#'
 #' Generating random weights to use in matching procedures,
 #' each summing to one.
 #'
-#' This function generates a vector of weights for each
-#' column in your input data. You must set prior weights
-#' (which can all be the same), and you must set a number of vectors.
-#' After that you have some options: set minimum weights to make sure
-#' that we don't have too little of any given column,
-#' and set up hierarchical info if you have categories you
-#' want to lump together (see below)
-#' @param prior_weights Must be equal to the length of your columns -
+#' @param prior_weights Must be equal to the length of your columns,
 #'   i.e. the length of the weight vectors this function will produce.
-#'   We'll use this to generate uniform random variables from 0 to this
-#'   number. Can be the same value repeated if desired.
-#' @param number_vectors How many weight vectors you want.
-#' @param minimum_weights If you want to set minimums, either globally or
-#'   per column. Note that this will give this minimum, and then add random
-#'   weights on top of that.
+#' @param number_vectors How many weight vectors to generate.
+#' @param minimum_weights If you want to set minimums weights.
 #' @param hierarchical_list List per group / category of variable:
 #'   \describe{
 #'     \item{\code{"index"}}{Vector of indices that this group corresponds with}
 #'     \item{\code{"weight"}}{Weight for this group}
-#'     \item{\code{"variance"}}{(Optional) how much variance you want this group
-#'   to have}
+#'     \item{\code{"variance"}}{(Optional) how much variance this group will havve}
 #'   }
-#'   If you use this, we'll still combine it with
-#'   `prior_weights` and `minimum_weights`
 #' @return list of weight vectors
 #'
 #' @export

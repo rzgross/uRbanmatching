@@ -2,17 +2,16 @@
 % Please edit documentation in R/is_tf.R
 \name{is_tf}
 \alias{is_tf}
-\title{Test if \code{x} is a length-one logical}
+\title{is_tf}
 \usage{
 is_tf(x)
 }
 \arguments{
-\item{x}{ideally a logical!}
+\item{x}{Object to test.}
 }
 \value{
 TRUE if x is a length one logical, else FALSE
 }
 \description{
-Test if \code{x} is a length-one logical
+Test if \code{x} is a length-one logical.
 }
-\keyword{internal}

@@ -1,10 +1,9 @@
-#' Generates the four different treatment functions we use
-#' for simulations in the paper.
+#' paper_treatment_functions
 #'
-#' @param target_mean Desired mean for each of the treatment probabilities,
-#'   should be in (0, 1).
-#' @return List of four functions that take in a matrix and
-#'   output a vector of probabilities:
+#' Generates the four different treatment functions used for simulations in the paper.
+#'
+#' @param target_mean Desired mean for each of the treatment probabilities, should be in (0, 1).
+#' @return List of four functions that take in a matrix and output a vector of probabilities:
 #' \describe{
 #'   \item{\code{constant_treat_prob}}{Just repeats \code{target_mean}}
 #'   \item{\code{logistic_treat_prob}}{Computes a logistic style relationship

@@ -1,10 +1,10 @@
-#' Generates a matrix where each row is generated
-#' with covariance equal to \code{cov_mat}.
+#' x_from_cov
+#'
+#' Generates a matrix where each row is generated with covariance equal to \code{cov_mat}.
 #'
 #' @param cov_mat The covariance desired.
-#' @param n_rows How many rows to produce.
-#' @return A matrix such that the covariance would tend to
-#'   \code{cov_mat} as \code{n_rows} grows.
+#' @param n_rows Number of rows to produce.
+#' @return A matrix such that the covariance would tend to \code{cov_mat} as \code{n_rows} grows.
 #'
 #' @export
 x_from_cov <- function(cov_mat,

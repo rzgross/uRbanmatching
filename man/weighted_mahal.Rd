@@ -2,7 +2,7 @@
 % Please edit documentation in R/weighted_mahal.R
 \name{weighted_mahal}
 \alias{weighted_mahal}
-\title{Computes weighted Mahalanobis distance, using Choleski decomp.}
+\title{weighted_mahal}
 \usage{
 weighted_mahal(
   x_mat,
@@ -14,60 +14,21 @@ weighted_mahal(
 )
 }
 \arguments{
-\item{x_mat}{numeric matrix (adjust non-numeric columns prior),
-already rank-adjusted if desired}
+\item{x_mat}{Numeric matrix (adjust non-numeric columns prior), already rank-adjusted if desired.}
 
-\item{cov_x}{covariance of x, calculated potentially with ranks}
+\item{cov_x}{Covariance of x, calculated potentially with ranks.}
 
-\item{weight_vec}{vector of weights corresponding to columns of x_mat,
-giving weights relative to "raw" (ranked) Mahalanobis.
-Note that the resulting matrix does depend on the scale of the
-weight vector, but the matching won't: scaling the Mahalanobis
-matrix has no effect on distance minimising pairs etc}
+\item{weight_vec}{Vector of weights corresponding to columns of x_mat, giving weights relative to normal Mahalanobis.}
 
-\item{treat_vec}{optionally specify which units are treated.
-If \code{NULL} (default), will just return
-\code{nrow(x_mat) x nrow(x_mat)} distance
-matrix of all pairs. Can be logicals or \eqn{{0, 1}}}
+\item{treat_vec}{optionally specify which units are treated.}
 
-\item{sqrt_mahal}{logical, default TRUE; do you want regular Mahalanobis:
-\eqn{d(x_i, x_j) = (x_i - x_j)' \Sigma^{-1} (x_i - x_j)}
-or the square root? (in weighted, \eqn{\Sigma^{-1}} becomes
-\eqn{W \Sigma^{-1} W} in the above)}
+\item{sqrt_mahal}{Logical, default TRUE; whether to use regular Mahalanobis.}
 
-\item{partial_index}{In some cases, you want a subset of the full
-N x N matrix, but you can't partition it like you want
-with treat_vec. e.g. you want
-\code{full_dist[c(1, 2, 3), 1:10]}
-then use
-\code{partial_index = list(c(1,2,3), 1:10)}}
+\item{partial_index}{How to partition the full matrix.}
 }
 \value{
-returns a matrix of pairwise distances; the relevant indexing
-  depends on \code{treat_vec} and \code{partial_index}
+returns a matrix of pairwise distances; the relevant indexing depends on \code{treat_vec} and \code{partial_index}
 }
 \description{
-Note: def. of weighted:
-\eqn{d(x_i, x_j) = (x_i - x_j)' W \Sigma^{-1} W (x_i - x_j)}
-where \eqn{W} = \code{diag(weight_vec)}
-R's cholesky gives \eqn{U} s.t. \eqn{U' U = S} (i.e. \eqn{U = chol(S)})
-so in general we want:
-\deqn{
-  (x_i - x_j)' W (U' U)^{-1} W (x_i - x_j) \\
-= (x_i - x_j)' W U^{-1} (U')^{-1} W (x_i - x_j) \\
-= x_i' W U^{-1} (U')^{-1} W x_i +
-  x_j' W U^{-1} (U')^{-1} W x_j \\
-  - 2 x_i' W U^{-1} (U')^{-1} W x_j
-}
-Solving the above is manageable if we have \eqn{y_i = (U')^{-1} W x_i}
-or moving terms around, \eqn{W^{-1} U' y_i = x_i},
-which is simple by \code{forwardsolve}. Then we have:
-\deqn{dist(x_i, x_j) = ||y_i||^2 + ||y_j||^2 - 2 y_i' y_j}
-Letting \eqn{Y = (y_1', y_2', .... ,y_n')'}
-(which we can get in one line,
-\eqn{Y' = } \code{forwardsolve} \eqn{(W^{-1} U', x_mat')})
-the first two parts are just \code{rowSums}\eqn{(Y^2)}
-(note that the code uses \eqn{Y'}, thus \code{colSums})
-(add \code{outer(.,.)} to finish)
-and the last is \eqn{Y Y'}
+Computes weighted Mahalanobis distance, using Choleski decomp.
 }

@@ -1,11 +1,10 @@
-#' Converts \code{rank_cols} in all allowed forms to an integer index
+#' rank_integer_index
 #'
-#' Takes in ranked cols, either given by integer (numeric is fine) index;
-#' logical index; or named. Converts to integer index
-#' @param rank_cols integer/number, or logical, or names within
-#'   \code{colnames(x_mat)}
+#' Converts \code{rank_cols} in all allowed forms to an integer index. Takes in ranked cols, either given by integer, logical, or named index. Converts to integer index.
+#'
+#' @param rank_cols Integer/number, or logical, or names within \code{colnames(x_mat)}
 #' @param x_mat the x matrix of interest
-#' @keywords internal
+#' @export
 rank_integer_index <- function(rank_cols, x_mat) {
   if (is.null(rank_cols)) {
     return(vector("integer", 0L))

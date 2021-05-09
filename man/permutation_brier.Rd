@@ -2,8 +2,7 @@
 % Please edit documentation in R/permutation_brier.R
 \name{permutation_brier}
 \alias{permutation_brier}
-\title{For a given match, computes the brier score distribution
-if the pairing were truly random}
+\title{permutation_brier}
 \usage{
 permutation_brier(
   x_mat,
@@ -17,27 +16,25 @@ permutation_brier(
 )
 }
 \arguments{
-\item{x_mat}{typical input matrix}
+\item{x_mat}{Typical input matrix}
 
-\item{match_list}{match result}
+\item{match_list}{Match result}
 
-\item{design}{see \code{predict_prepare}}
+\item{design}{See \code{predict_prepare}}
 
-\item{use_cv}{logical, default TRUE: use CV to get briers? Else
-split.}
+\item{use_cv}{Logical, default TRUE: wether to use CV to get briers? Else split.}
 
-\item{num_permutations}{how many permutations to do}
+\item{num_permutations}{Number of permutations to do.}
 
-\item{match_predict_function}{function to predict treated units}
+\item{match_predict_function}{Function to predict treated units.}
 
-\item{num_folds}{if using CV, how many folds?}
+\item{num_folds}{If using CV, how many folds to make.}
 
-\item{train_fraction}{if using split, fraction to train?}
+\item{train_fraction}{If using split, what fraction to train.}
 }
 \value{
-vector of brier scores for random pairings
+Vector of brier scores for random pairings
 }
 \description{
-Works for bipartite and non-bipartite, since it just
-switches the labels within pairs.
+For a given match, computes the brier score distribution, assuming the pairings were truly random.
 }

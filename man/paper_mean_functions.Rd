@@ -2,8 +2,7 @@
 % Please edit documentation in R/paper_mean_functions.R
 \name{paper_mean_functions}
 \alias{paper_mean_functions}
-\title{Generates the four different mean functions we use
-for simulations in the paper.}
+\title{paper_mean_functions}
 \usage{
 paper_mean_functions()
 }
@@ -18,6 +17,5 @@ List of four functions that take in a matrix and
 }
 }
 \description{
-We make them all mean zero for no real reason, we don't really care
-what the mean is.
+Generates the four different mean functions used for simulations in the paper.
 }

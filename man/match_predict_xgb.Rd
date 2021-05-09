@@ -2,8 +2,7 @@
 % Please edit documentation in R/match_predict_xgb.R
 \name{match_predict_xgb}
 \alias{match_predict_xgb}
-\title{Function factory to predict treatment / control pairs using
-xgboost}
+\title{match_predict_xgb}
 \usage{
 match_predict_xgb(
   nrounds = 50,
@@ -13,23 +12,17 @@ match_predict_xgb(
 )
 }
 \arguments{
-\item{nrounds}{training rounds for the xgb algorithm}
+\item{nrounds}{Training rounds for the xgb algorithm.}
 
-\item{nthread}{threads to use for fitting, default 1...}
+\item{nthread}{Number of threads to use for fitting, default 1.}
 
-\item{params}{list of params to pass to xgboost,
-most likely something like \code{eta} and \code{max.depth}}
+\item{params}{List of params to pass to xgboost, most likely something like \code{eta} and \code{max.depth}}
 
-\item{...}{***}
+\item{...}{Additional xgboost params.}
 }
 \value{
-returns a function that takes in a \code{train_test_list}
-  from \code{predict_prepare}; this function returns a
-  vector of predictions for the test data
+Returns a function that takes in a \code{train_test_list} from \code{predict_prepare}; this function returns a vector of predictions for the test data.
 }
 \description{
-The returned function takes in training and test data
-(output from \code{predict_prepare}), trains an
-xgboost model on the training, predicts on the test, and
-returns the test vector
+Function to predict treatment / control pairs using xgboost. The returned function takes in training and test data (output from \code{predict_prepare}), trains an xgboost model on the training, predicts on the test, and returns the test vector
 }

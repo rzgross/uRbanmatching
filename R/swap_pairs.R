@@ -1,8 +1,11 @@
-#' Given a logical swap vector, switches treated and control units around
+#' swap_pairs
 #'
-#' @param match_list typical \code{match_list} entity
-#' @param swap logical vector indicating which pairs should swap
-#' @return another match_list, but now with swapped pairs
+#' Given a logical swap vector, switches treated and control units.
+#'
+#' @param match_list typical \code{match_list} entity.
+#' @param swap logical vector indicating which pairs should swap.
+#' @return Another match_list, but now with swapped pairs.
+#' @export
 swap_pairs <- function(match_list,
                        swap) {
   stopifnot(length(swap) == length(match_list[["treat_index"]]))

@@ -1,18 +1,12 @@
-#' Function factory to predict treatment / control pairs using
-#' xgboost
+#' match_predict_xgb
 #'
-#' The returned function takes in training and test data
-#' (output from \code{predict_prepare}), trains an
-#' xgboost model on the training, predicts on the test, and
-#' returns the test vector
-#' @param nrounds training rounds for the xgb algorithm
-#' @param nthread threads to use for fitting, default 1...
-#' @param params list of params to pass to xgboost,
-#'   most likely something like \code{eta} and \code{max.depth}
-#' @return returns a function that takes in a \code{train_test_list}
-#'   from \code{predict_prepare}; this function returns a
-#'   vector of predictions for the test data
-#' @param ... ***
+#' Function to predict treatment / control pairs using xgboost. The returned function takes in training and test data (output from \code{predict_prepare}), trains an xgboost model on the training, predicts on the test, and returns the test vector
+#'
+#' @param nrounds Training rounds for the xgb algorithm.
+#' @param nthread Number of threads to use for fitting, default 1.
+#' @param params List of params to pass to xgboost, most likely something like \code{eta} and \code{max.depth}
+#' @return Returns a function that takes in a \code{train_test_list} from \code{predict_prepare}; this function returns a vector of predictions for the test data.
+#' @param ... Additional xgboost params.
 #' @export
 match_predict_xgb <- function(nrounds = 50,
                               nthread = 1,

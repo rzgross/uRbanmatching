@@ -1,9 +1,9 @@
-#' Creates an \code{index_list} from a \code{match_list}, splitting
-#' according to \code{train_fraction}
+#' generate_train_test_split
 #'
-#' @param match_list typical \code{match_list} entry
-#' @param train_fraction fraction (between 0 and 1) to
-#'   use for training data (and the rest for test)
+#' Creates an \code{index_list} from a \code{match_list}, splitting according to \code{train_fraction}.
+#'
+#' @param match_list \code{match_list} entry.
+#' @param train_fraction Fraction (between 0 and 1) to use for training data (and the rest for test).
 #'
 #' @export
 generate_train_test_split <- function(match_list,

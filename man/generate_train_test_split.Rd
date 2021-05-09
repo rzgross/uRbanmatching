@@ -2,18 +2,15 @@
 % Please edit documentation in R/generate_train_test_split.R
 \name{generate_train_test_split}
 \alias{generate_train_test_split}
-\title{Creates an \code{index_list} from a \code{match_list}, splitting
-according to \code{train_fraction}}
+\title{generate_train_test_split}
 \usage{
 generate_train_test_split(match_list, train_fraction = 0.7)
 }
 \arguments{
-\item{match_list}{typical \code{match_list} entry}
+\item{match_list}{\code{match_list} entry.}
 
-\item{train_fraction}{fraction (between 0 and 1) to
-use for training data (and the rest for test)}
+\item{train_fraction}{Fraction (between 0 and 1) to use for training data (and the rest for test).}
 }
 \description{
-Creates an \code{index_list} from a \code{match_list}, splitting
-according to \code{train_fraction}
+Creates an \code{index_list} from a \code{match_list}, splitting according to \code{train_fraction}.
 }

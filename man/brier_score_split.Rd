@@ -13,15 +13,15 @@ brier_score_split(
 )
 }
 \arguments{
-\item{x_mat}{typical input matrix}
+\item{x_mat}{Typical input matrix}
 
-\item{match_list}{match result}
+\item{match_list}{Match result}
 
-\item{design}{see \code{predict_prepare}}
+\item{design}{See \code{predict_prepare}}
 
 \item{train_fraction}{Split of data to use for training}
 
-\item{match_predict_function}{function to predict treated units}
+\item{match_predict_function}{Function to predict treated units.}
 }
 \value{
 Brier score

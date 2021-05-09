@@ -1,11 +1,13 @@
-##' Plotting simulation results. Plan: four plots, one for each N value
-##'
-##' @param all_results result from \code{generate_plot_list}
-##' @param y_rel where to limit y to above and below (length two vector)
-##' @return Nothing, just plots to the device
-##' @import grDevices
-##' @import graphics
-##' @export
+#' plot_sims
+#'
+#' Plotting simulation results.
+#'
+#' @param all_results result from \code{generate_plot_list}
+#' @param y_rel where to limit y to above and below (length two vector)
+#' @return Nothing, just plots to the device
+#' @import grDevices
+#' @import graphics
+#' @export
 plot_sims <- function(all_results,
                       y_rel = c(0.1, 0.4)) {
   x_push <- 0.15

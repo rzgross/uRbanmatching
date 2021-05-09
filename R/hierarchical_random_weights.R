@@ -1,6 +1,9 @@
+#' hierarchical_random_weights
+#'
 #' Generates weights in a hierarchical setting
+#'
 #' @inheritParams generate_random_weights
-#' @keywords internal
+#' @export
 hierarchical_random_weights <- function(prior_weights,
                                         number_vectors,
                                         minimum_weights,

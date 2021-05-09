@@ -1,18 +1,16 @@
-#' For a given match, computes the brier score distribution
-#' if the pairing were truly random
+#' permutation_brier
 #'
-#' Works for bipartite and non-bipartite, since it just
-#' switches the labels within pairs.
-#' @param x_mat typical input matrix
-#' @param match_list match result
-#' @param design see \code{predict_prepare}
-#' @param use_cv logical, default TRUE: use CV to get briers? Else
-#'   split.
-#' @param num_permutations how many permutations to do
-#' @param match_predict_function function to predict treated units
-#' @param num_folds if using CV, how many folds?
-#' @param train_fraction if using split, fraction to train?
-#' @return vector of brier scores for random pairings
+#' For a given match, computes the brier score distribution, assuming the pairings were truly random.
+#'
+#' @param x_mat Typical input matrix
+#' @param match_list Match result
+#' @param design See \code{predict_prepare}
+#' @param use_cv Logical, default TRUE: wether to use CV to get briers? Else split.
+#' @param num_permutations Number of permutations to do.
+#' @param match_predict_function Function to predict treated units.
+#' @param num_folds If using CV, how many folds to make.
+#' @param train_fraction If using split, what fraction to train.
+#' @return Vector of brier scores for random pairings
 #'
 #' @export
 permutation_brier <- function(x_mat,

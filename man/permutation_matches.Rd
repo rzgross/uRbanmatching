@@ -2,8 +2,7 @@
 % Please edit documentation in R/permutation_matches.R
 \name{permutation_matches}
 \alias{permutation_matches}
-\title{Takes matches and their Brier scores, and computes
-permutation Brier scores and the best matches}
+\title{permutation_matches}
 \usage{
 permutation_matches(
   matches_by_sinks,
@@ -15,33 +14,22 @@ permutation_matches(
 )
 }
 \arguments{
-\item{matches_by_sinks}{List by number of sinks, each a list
-of match results (a match list), for each weight vector.}
+\item{matches_by_sinks}{List by number of sinks, each a list of match results (a match list), for each weight vector.}
 
-\item{briers_by_sinks}{List by number of sinks, each a vector
-of Brier results. Basically a number for each match in
-\code{matches_by_sinks}.}
+\item{briers_by_sinks}{List by number of sinks, each a vector of Brier results. Basically a number for each match in \code{matches_by_sinks}.}
 
-\item{x_mat}{Typical input matrix}
+\item{x_mat}{Typical input matrix.}
 
-\item{n_sinks}{Vector of number of sinks - probably could get this
-directly from \code{matches_by_sinks}, but nice to be explicit.}
+\item{n_sinks}{Vector of number of sinks.}
 
-\item{approximate_by_best}{Logical, default \code{TRUE}. Only
-compute one permutation distribution, using the best result by brier
-score to do so. Useful because it changes little, but saves a ton of
-time.}
+\item{approximate_by_best}{Logical, default \code{TRUE}. Only compute one permutation distribution, using the best result by brier score to do so.}
 
-\item{silent}{Do you want to suppress message output? Default
-\code{!interactive()}.}
+\item{silent}{Whether to suppress message output as it's running. Default \code{!interactive()}.}
 }
 \value{
-Returns a list of two lists. The first is vectors
-  of permutation Brier scores (one per match). The second is the
-  best match at each sink value, along with some extra info about that
-  match.
+Returns a list of two lists. The first is vectors of permutation Brier scores (one per match). The second is the best match at each sink value, along with some extra info about that match.
 }
 \description{
-Can work for bipartite or non-bipartite matches,
-the permutation is just over the labels.
+Takes matches and their Brier scores, and computes
+permutation Brier scores and the best matches.
 }

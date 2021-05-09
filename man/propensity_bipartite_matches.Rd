@@ -2,7 +2,7 @@
 % Please edit documentation in R/propensity_bipartite_matches.R
 \name{propensity_bipartite_matches}
 \alias{propensity_bipartite_matches}
-\title{Propensity match for (default) bipartite}
+\title{propensity_bipartite_matches}
 \usage{
 propensity_bipartite_matches(
   x_mat,
@@ -33,5 +33,5 @@ propensity_bipartite_matches(
 \item{tol_val}{For optimal matches, you can set a tolerance to be within optimality of, which can be zero for perfect optimality.}
 }
 \description{
-Propensity match for (default) bipartite
+Propensity match for bipartite matching.
 }

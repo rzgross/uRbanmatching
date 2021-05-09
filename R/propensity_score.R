@@ -1,14 +1,10 @@
-#' Calculates propensity scores for a given matrix and treatment vector
+#' propensity_score
 #'
-#' This function takes in an input matrix and a treatment vector,
-#' along with a function that makes predictions (default xgboost method given)
-#' and returns a predicted probability of treatment for each unit, either
-#' using in-sample or out-of-sample fits.
+#' Calculates propensity scores for a given matrix and treatment vector. Takes in an input matrix and a treatment vector, along with a function that makes predictions (default xgboost method given) and returns a predicted probability of treatment for each unit, either using in-sample or out-of-sample fits.
 #' @param x_mat Standard input matrix (already rank adjusted).
 #' @param treat_vec Usual 0/1 treatment vector.
 #' @param propensity_list See \code{gen_propensity_list}
-#' @return Returns a vector equal in length to treat_vec of propensity.
-#'   score.
+#' @return Returns a vector equal in length to treat_vec of propensity score.
 #'
 #' @export
 propensity_score <- function(x_mat,

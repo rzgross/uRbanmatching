@@ -1,5 +1,9 @@
+#' with_replacement_match
+#'
+#' Computes matching with replacement. Alternative to "greedy" and "optimal".
+#'
 #' @inheritParams bipartite_matches
-#' @keywords internal
+#' @export
 with_replacement_match <- function(dist_mat,
                                    treat_vec) {
   control_index <- which(treat_vec == 0L)

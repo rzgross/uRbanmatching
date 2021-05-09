@@ -1,20 +1,13 @@
-#' Wraps a match_list from a simple match result and slices off
-#' various numbers of sinks
+#' simple_sink_wrap
 #'
-#' Note that for \code{with_replacement} matching, this is the
-#' right thing to do, but for greedy matching with a random ordering
-#' it isn't obviously correct, but does give the nice property
-#' of more sinks = lower distances.
-#' @param simple_match_list match result from one of \code{with_replacement_match},
-#'   \code{greedy_match}, \code{with_replacement_nbp_match} or
-#'   \code{greedy_nbp_match}.
+#' Wraps a match_list from a simple match result and removes various numbers of sinks.
+#'
+#' @param simple_match_list match result from one of \code{with_replacement_match}, \code{greedy_match}, \code{with_replacement_nbp_match} or \code{greedy_nbp_match}.
 #' @param n_sinks default NULL, vector of sink values to use.
-#' @param weight_vec Default \code{NULL}: optionally supply the weight vector
-#'   used to generate \code{dist_mat} and it'll be returned in the
-#'   \code{match_list} generated from this function
-#' @return list of lists; see parent function
+#' @param weight_vec Default \code{NULL}: optionally supply the weight vector used to generate \code{dist_mat} and it will be returned in the \code{match_list} generated from this function
+#' @return List of lists.
 #'
-#' @keywords internal
+#' @export
 simple_sink_wrap <- function(simple_match_list,
                              n_sinks = NULL,
                              weight_vec = NULL) {

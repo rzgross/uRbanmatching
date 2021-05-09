@@ -2,7 +2,7 @@
 % Please edit documentation in R/reshape_list_of_sims.R
 \name{reshape_list_of_sims}
 \alias{reshape_list_of_sims}
-\title{Reshapes a list of simulations to a nice dataframe}
+\title{reshape_list_of_sims}
 \usage{
 reshape_list_of_sims(
   list_of_sims,
@@ -27,8 +27,8 @@ reshape_list_of_sims(
 \item{num_weight_vectors}{How many weight vectors were used}
 }
 \value{
-Data frame spreading results...
+Data frame spreading results.
 }
 \description{
-In the future this should be cleaner
+Reshapes a list of simulations to a nice dataframe.
 }

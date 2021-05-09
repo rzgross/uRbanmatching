@@ -2,21 +2,18 @@
 % Please edit documentation in R/x_from_cov.R
 \name{x_from_cov}
 \alias{x_from_cov}
-\title{Generates a matrix where each row is generated
-with covariance equal to \code{cov_mat}.}
+\title{x_from_cov}
 \usage{
 x_from_cov(cov_mat, n_rows)
 }
 \arguments{
 \item{cov_mat}{The covariance desired.}
 
-\item{n_rows}{How many rows to produce.}
+\item{n_rows}{Number of rows to produce.}
 }
 \value{
-A matrix such that the covariance would tend to
-  \code{cov_mat} as \code{n_rows} grows.
+A matrix such that the covariance would tend to \code{cov_mat} as \code{n_rows} grows.
 }
 \description{
-Generates a matrix where each row is generated
-with covariance equal to \code{cov_mat}.
+Generates a matrix where each row is generated with covariance equal to \code{cov_mat}.
 }

@@ -2,18 +2,15 @@
 % Please edit documentation in R/paper_treatment_functions.R
 \name{paper_treatment_functions}
 \alias{paper_treatment_functions}
-\title{Generates the four different treatment functions we use
-for simulations in the paper.}
+\title{paper_treatment_functions}
 \usage{
 paper_treatment_functions(target_mean = 0.425)
 }
 \arguments{
-\item{target_mean}{Desired mean for each of the treatment probabilities,
-should be in (0, 1).}
+\item{target_mean}{Desired mean for each of the treatment probabilities, should be in (0, 1).}
 }
 \value{
-List of four functions that take in a matrix and
-  output a vector of probabilities:
+List of four functions that take in a matrix and output a vector of probabilities:
 \describe{
   \item{\code{constant_treat_prob}}{Just repeats \code{target_mean}}
   \item{\code{logistic_treat_prob}}{Computes a logistic style relationship
@@ -25,6 +22,5 @@ List of four functions that take in a matrix and
 }
 }
 \description{
-Generates the four different treatment functions we use
-for simulations in the paper.
+Generates the four different treatment functions used for simulations in the paper.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/generate_simulation_input.R
 \name{generate_simulation_input}
 \alias{generate_simulation_input}
-\title{Generates input needed for a simulation run}
+\title{generate_simulation_input}
 \usage{
 generate_simulation_input(
   n_rows = 500L,
@@ -27,9 +27,7 @@ treatment probabilities.}
 \item{mean_generator}{Function that takes a matrix and produces
 an expected value for each row.}
 
-\item{error_generator}{Function that accepts a number of rows and
-generates an error vector (e.g. generates normal noise). Should
-generate zero-mean data.}
+\item{error_generator}{Function that accepts a number of rows and generates an error vector (e.g. normal noise).}
 }
 \value{
 List:
@@ -40,5 +38,5 @@ List:
 }
 }
 \description{
-Generates input needed for a simulation run
+Generates input needed for a simulation run.
 }

@@ -2,18 +2,15 @@
 % Please edit documentation in R/rank_integer_index.R
 \name{rank_integer_index}
 \alias{rank_integer_index}
-\title{Converts \code{rank_cols} in all allowed forms to an integer index}
+\title{rank_integer_index}
 \usage{
 rank_integer_index(rank_cols, x_mat)
 }
 \arguments{
-\item{rank_cols}{integer/number, or logical, or names within
-\code{colnames(x_mat)}}
+\item{rank_cols}{Integer/number, or logical, or names within \code{colnames(x_mat)}}
 
 \item{x_mat}{the x matrix of interest}
 }
 \description{
-Takes in ranked cols, either given by integer (numeric is fine) index;
-logical index; or named. Converts to integer index
+Converts \code{rank_cols} in all allowed forms to an integer index. Takes in ranked cols, either given by integer, logical, or named index. Converts to integer index.
 }
-\keyword{internal}

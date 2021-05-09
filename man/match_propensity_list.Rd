@@ -2,7 +2,7 @@
 % Please edit documentation in R/match_propensity_list.R
 \name{match_propensity_list}
 \alias{match_propensity_list}
-\title{Generates the propensity parameters used for using propensity-based calipers}
+\title{match_propensity_list}
 \usage{
 match_propensity_list(
   propensity_function = propensity_score_xgb(),
@@ -19,18 +19,13 @@ match_propensity_list(
 
 \item{n_folds}{Default NULL; how many folds if using out of sample propensity.}
 
-\item{caliper_sd_mult}{We'll set the maximum gap between units
-as \code{sd(propensity_score) * k}, where this parameter is the
-value k. Default 0.6.}
+\item{caliper_sd_mult}{Maximum gap between units.In \code{sd(propensity_score) * k}, where this parameter is the value k. Default 0.6.}
 
-\item{continuous_mult}{See e.g. \code{gen_caliper_list}: instead of
-blocking matches that are "too far apart" on the caliper, we'll
-add a penalty for going above.}
+\item{continuous_mult}{Penality for going above a certain caliper.}
 }
 \value{
 list with names equal to all input params
 }
 \description{
-We use this for input for \code{all_propensity_caliper_matches} (and
-likely a nonbipartite version soon).
+Generates the propensity parameters used for using propensity-based calipers.
 }

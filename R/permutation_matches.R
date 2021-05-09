@@ -1,26 +1,15 @@
-#' Takes matches and their Brier scores, and computes
-#' permutation Brier scores and the best matches
+#' permutation_matches
 #'
-#' Can work for bipartite or non-bipartite matches,
-#' the permutation is just over the labels.
-#' @param matches_by_sinks List by number of sinks, each a list
-#'   of match results (a match list), for each weight vector.
-#' @param briers_by_sinks List by number of sinks, each a vector
-#'   of Brier results. Basically a number for each match in
-#'   \code{matches_by_sinks}.
-#' @param x_mat Typical input matrix
-#' @param n_sinks Vector of number of sinks - probably could get this
-#'   directly from \code{matches_by_sinks}, but nice to be explicit.
-#' @param approximate_by_best Logical, default \code{TRUE}. Only
-#'   compute one permutation distribution, using the best result by brier
-#'   score to do so. Useful because it changes little, but saves a ton of
-#'   time.
-#' @param silent Do you want to suppress message output? Default
-#'   \code{!interactive()}.
-#' @return Returns a list of two lists. The first is vectors
-#'   of permutation Brier scores (one per match). The second is the
-#'   best match at each sink value, along with some extra info about that
-#'   match.
+#' Takes matches and their Brier scores, and computes
+#' permutation Brier scores and the best matches.
+#'
+#' @param matches_by_sinks List by number of sinks, each a list of match results (a match list), for each weight vector.
+#' @param briers_by_sinks List by number of sinks, each a vector of Brier results. Basically a number for each match in \code{matches_by_sinks}.
+#' @param x_mat Typical input matrix.
+#' @param n_sinks Vector of number of sinks.
+#' @param approximate_by_best Logical, default \code{TRUE}. Only compute one permutation distribution, using the best result by brier score to do so.
+#' @param silent Whether to suppress message output as it's running. Default \code{!interactive()}.
+#' @return Returns a list of two lists. The first is vectors of permutation Brier scores (one per match). The second is the best match at each sink value, along with some extra info about that match.
 #'
 #' @export
 permutation_matches <- function(matches_by_sinks,

@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_sims.R
 \name{plot_sims}
 \alias{plot_sims}
-\title{Plotting simulation results. Plan: four plots, one for each N value}
+\title{plot_sims}
 \usage{
 plot_sims(all_results, y_rel = c(0.1, 0.4))
 }
@@ -15,5 +15,5 @@ plot_sims(all_results, y_rel = c(0.1, 0.4))
 Nothing, just plots to the device
 }
 \description{
-Plotting simulation results. Plan: four plots, one for each N value
+Plotting simulation results.
 }

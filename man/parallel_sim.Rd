@@ -2,7 +2,7 @@
 % Please edit documentation in R/parallel_sim.R
 \name{parallel_sim}
 \alias{parallel_sim}
-\title{Run \code{compute_sim_result} in parallel using \code{parallel::mclapply}}
+\title{parallel_sim}
 \usage{
 parallel_sim(
   x_generator = default_x_generator,
@@ -32,9 +32,7 @@ treatment probabilities.}
 \item{mean_generator}{Function that takes a matrix and produces
 an expected value for each row.}
 
-\item{error_generator}{Function that accepts a number of rows and
-generates an error vector (e.g. generates normal noise). Should
-generate zero-mean data.}
+\item{error_generator}{Function that accepts a number of rows and generates an error vector (e.g. normal noise).}
 
 \item{n_sink_gen}{Default \code{n_sink_generator}. This argument should be a function that accepts a \code{treat_vec} and produces a vector of sink numbers.}
 
@@ -46,18 +44,18 @@ generate zero-mean data.}
 
 \item{num_weight_vectors}{How many weight vectors to generate.}
 
-\item{iterations}{How many iterations to do.}
+\item{iterations}{Number of iterations to complete.}
 
-\item{num_cores}{How many cores to use.}
+\item{num_cores}{Number of cores to use.}
 
-\item{num_cores1}{***}
+\item{num_cores1}{Number of cores to use.}
 
-\item{operating_system}{***}
+\item{operating_system}{"Mac," "Windows," etc. If Windows, uses parLapply instead of mclapply.}
 
-\item{names_list}{***}
+\item{names_list}{Default NULL. List of index names to return with the results.}
 
 \item{silent}{Whether to suppress messages as it's running.. Default \code{!interactive()}.}
 }
 \description{
-Run \code{compute_sim_result} in parallel using \code{parallel::mclapply}
+Run \code{compute_sim_result} in parallel using \code{parallel::mclapply} or \code{parallel::parLapply}
 }

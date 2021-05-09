@@ -2,7 +2,7 @@
 % Please edit documentation in R/n_sink_generator.R
 \name{n_sink_generator}
 \alias{n_sink_generator}
-\title{Generates a function that generates a vector of sink lengths}
+\title{n_sink_generator}
 \usage{
 n_sink_generator(start_frac = 0, end_frac = 0.8, length_out = 9)
 }
@@ -14,10 +14,8 @@ n_sink_generator(start_frac = 0, end_frac = 0.8, length_out = 9)
 \item{length_out}{How many sink values we want, default 9.}
 }
 \value{
-Function that accepts a \code{treat_vec}
-  and returns a vector of numbers.
+Function that accepts a \code{treat_vec} and returns a vector of numbers.
 }
 \description{
-This function returns a function that accepts a treatment vector
-and generates a vector of numbers to be used as sink counts.
+Generates a function that generates a vector of sink lengths.
 }
